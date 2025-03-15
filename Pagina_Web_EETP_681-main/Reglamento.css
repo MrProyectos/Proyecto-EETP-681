@@ -1,0 +1,702 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+@font-face {
+    font-family:  lheader;
+    src: url(imagenescontacto/Buried\ Hopper.ttf);
+}
+@font-face {
+    font-family:  lbody;
+    src: url(imagenfooter/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: lfooter;
+    src: url(imagenfooter/Belleza-Regular.ttf);
+}
+.regresar img{
+    width: 40px;
+}
+.regresar{
+    background-color: transparent;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transform: translateX(120px);
+    transition: all .25s;
+    cursor: pointer;
+    z-index: 100;
+}
+.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
+/*-----------------Estilos Generales-------------------------*/
+header{
+    background-color: #2b2d9c;
+    width: 100%;
+    height: 16em;
+}
+.loesc img{
+    display: flex;
+    position: absolute;
+    width: 8%;
+    margin-top: -11.5em;
+    margin-left: 1.5em;
+}
+.titulo{
+    padding-top: 1em;
+    font-size: 60px;
+    font-family: lheader;
+    color: #FFFFFF;
+}
+.inicio p{
+    color: #fff;
+    position: relative;
+    display: flex;
+    top: -4.3em;
+    margin-left: 4.2em;
+    font-family: lheader;
+}
+.nav{
+    background-color: rgba(41, 88, 125);
+    font-size: 10px;
+    text-align: center;
+    padding: 0.5em;
+    font-family: lheader;
+    transition: all 0.2s ease;
+    margin: 0; 
+    position: absolute; 
+    width: 100%; 
+}
+
+header .nav {
+    margin-top: 10px;
+    background-color: rgba(41, 88, 125);
+    font-size: 10px;
+    text-align: center;
+    font-family: lheader;
+    transition: all 0.2s ease;
+    margin: 0;
+    padding: 0; 
+}
+.nav a{
+    text-decoration: none;
+    color: #FFF;
+    font-family: lheader;
+}
+.nav a:hover{
+    background-color:  #2a6a7a;
+    padding: 5px;
+    font-family: lheader;
+}
+.nav ul{
+    list-style-type: none;
+    font-family: lheader;
+    padding: 10px;
+}
+.nav li{
+    display: inline;
+    height: 15px;
+    font-family: lheader;
+    margin: 0 15px;
+}
+
+h2 {
+    font-size: 5em;
+    font-family: lbody;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+mark {
+    background-color: #8494ee;
+}
+.subtitulo {
+    font-size: 3em;
+    text-align: center;
+    font-family:  lbody;
+    font-style:inherit;
+    color: #6676cc;
+
+}
+.deberes p{
+    padding-bottom: 0.5em;
+    text-align: justify;
+    font-size: x-large;
+    font-family: lbody;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+.organizacion p{
+    padding-bottom: 0.5em;
+    text-align: justify;
+    font-size: x-large;
+    font-family: lbody;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+.uniforme p{
+    padding-bottom: 0.5em;
+    text-align: justify;
+    font-size: x-large;
+    font-family: lbody;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+.celular p{
+    padding-bottom: 0.5em;
+    text-align: justify;
+    font-size: x-large;
+    font-family: lbody;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+.sancion p{
+    padding-bottom: 0.5em;
+    text-align: justify;
+    font-size: x-large;
+    font-family: lbody;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+.import p{
+    padding-bottom: 0.5em;
+    text-align: justify;
+    font-size: x-large;
+    font-family: lbody;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+.derechos p{
+    padding-bottom: 0.5em;
+    text-align: justify;
+    font-size: x-large;
+    font-family: lbody;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+li {
+    font-size: x-large;
+    font-family: lbody;
+    margin-left: 90px;
+    margin-right: 90px;
+    padding-bottom: 0.5em;
+    text-align: justify;
+}
+.subtituloFIN {
+    padding: 1em;
+    font-size: 3em;
+    text-align: center;
+    font-family: lbody;
+    font-weight: bold;
+    font-style: italic;
+}
+
+a.volerarriba {
+    font-size: x-large;
+    font-family: lbody;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0.5em;
+    border-radius: 5em; 
+    border: 2px solid #000;
+}
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 0.4em;
+   
+}
+.descargarpdf {
+    font-size: x-large;
+    font-family: lbody;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0.5em;
+ 
+}
+a.descargarpdf {
+    text-decoration: underline;
+    color: #000;
+}
+/*----FOOTER----*/
+footer{
+    background-color: #93b2d2;
+    color: #000000;
+}
+.logoimg img{
+    position: relative;
+    width: 8%;
+    margin-left: 14em;
+    margin-top: 6em;
+}
+.logotext p{
+    position: relative;
+    font-family: lfooter;
+    font-size: 20px;
+    margin-left: 6em;
+}
+.titulofoo p{
+    font-family: lfooter;
+    font-size: 25px;
+    font-weight: bold;
+}
+.t1{
+    position: relative;
+    margin-top: -10em;
+    margin-left: 28em;
+}
+.contactos img{
+    position: relative;
+    width: 2%;
+    margin-left: 37em;
+}
+.contactos p{
+    position: relative;
+    font-family: lfooter;
+    font-size: 17px;
+    margin-left: 39em;
+}
+.mapatext p{
+    margin-top: -2em;
+}
+.telimg img{
+    margin-top: 2em;
+}
+.teltext p{
+    margin-top: -2em;
+}
+.whatimg img{
+    margin-top: 2em;
+}
+.whattext p{
+    margin-top: -2em;
+}
+.correoimg img{
+    margin-top: 2em;
+}
+.correotext1 p{
+    margin-top: -2.5em;
+}
+.instaimg img{
+    margin-top: 1.5em;
+}
+.instatext p{
+    margin-top: -1.5em;
+}
+.t2{
+    margin-top: -11em;
+    margin-left: 45em;
+}
+.contador{
+    position: relative;
+    margin-left: 73em;
+    margin-top: 2em;
+}
+.foolegal{
+    background-color: #6a849e;
+}
+.copy{
+    margin-top: 14em;
+}
+/*-----PANTALLA GRANDE-----*/
+@media  screen and (min-width:1920px) {
+    /*----HEADER----*/
+    .inicio p{
+        margin-top: 2em;
+        margin-left: 5.2em;
+    }
+    /*----FOOTER----*/
+    footer{
+        width: 100%;
+    }
+    .logoimg img{
+        margin-left: 19em;
+    }
+    .logotext p{
+        margin-left: 4.5em;
+        font-size: 30px;
+    }
+    .t1{
+        margin-left: 37em;
+        margin-top: -12em;
+    }
+    .contactos img{
+        margin-left: 49em;
+    }
+    .contactos p{
+        margin-left: 51em;
+    }
+    .t2{
+        margin-left: 58em;
+        margin-top: -12.5em;
+    }
+    .contador{
+        margin-left: 93.5em;
+        margin-top: 3em;
+    }
+    .copy{
+        margin-top: 16em;
+    }
+}
+/*-----COMPUTADORA-----*/
+@media screen and (min-width:1366px) and (max-width:1500px) { 
+    /*----HEADER----*/
+    header{
+        background-color: #2b2d9c;
+        width: 100%;
+        height: 250px;;
+    }
+    .loesc img{
+        display: flex;
+        position: absolute;
+        width: 8%;
+        margin-top: -11.5em;
+        margin-left: 1.5em;
+    }
+    .titulo{
+        padding-top: 0.5em;
+        font-size: 70px;
+        font-family: lheader;
+        color: #FFFFFF;
+    }
+    .inicio p{
+        margin-left: 3.9em;
+        margin-top: -0.5em;
+    }
+    /*----BODY----*/
+    .TExTO h2{
+        font-size: 60px;
+    }
+    .subtituloFIN{
+        font-size: 30px;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    /*----FOOTER----*/
+    footer{
+        width: 100%;
+    }
+    .logoimg img{
+        margin-left: 12em;
+        margin-top: 3.5em;
+    }
+    .logotext p{
+        margin-left: 4em;
+    }
+    .t1{
+        margin-left: 24.5em;
+        margin-top: -8em;
+    }
+    .contactos img{
+        margin-left: 32em;
+    }
+    .contactos p{
+        margin-left: 34em;
+    }
+    .t2{
+        margin-top: -10.5em;
+        margin-left: 40em;
+    }
+    .contador{
+        margin-left: 65em;
+        margin-top: 2em;
+        width: 10%;
+    } 
+    .copy{
+        margin-top: 13.5em;
+    }
+}
+/*------------------------------------------------------------------------------*/
+/*.............................DE 1365px A 1024px...............................*/
+/*------------------------------------------------------------------------------*/
+@media  screen and (min-width:1024px) and (max-width:1365px) {
+    /*----HEADER----*/
+    header{
+        background-image: 100% center;
+        background-position: 100% center;
+        background-position-y: center;
+        background-position-x: center;
+        top: 0;
+        float: center;
+        object-fit: fill;
+        z-index: -1;
+        width: 100%;
+    }
+    .loesc img{
+        width: 12%;
+    }
+    .inicio{
+        margin-left: 0.1em;
+        margin-top: 1.5em;
+    }
+    .TExTO h2{
+        font-size: 60px;
+        margin-top: 0.5em;
+    }
+    /*----FOOTER----*/
+    footer{
+        width: 100%;
+    }
+    .logoimg img{
+        margin-left: 8em;
+    }
+    .logotext{
+        margin-left: -5em;
+        font-size: 18px;
+        width: 40%;
+        text-align: center;
+    }
+    .t1{
+        margin-left: 18em;
+        margin-bottom: 1em;
+    }
+    .contactos img{
+        margin-left: 22em;
+        width: 3%;
+    }
+    .contactos p{
+        margin-left: 24em;
+    }
+    .t2{
+        margin-left: 31em;
+        margin-top: -12em;
+        margin-bottom: 1em;
+    }
+    .contador{
+        margin-left: 51em;
+    }
+    .copy{
+        margin-top: 15em;
+    }
+}
+/*------------------------------------------------------------------------------*/
+/*............................DE 1023px A 768px.................................*/
+/*------------------------------------------------------------------------------*/
+@media screen and (min-width:768px) and (max-width:1023px){
+    /*----HEADER----*/
+    .titulo{
+        font-size: 45px;
+    }
+    .loesc img{
+        width: 12%;
+        margin-top: -8.5em;
+    }
+    .inicio{
+        margin-top: 1.8em;
+        position: relative;
+        display: flex;
+        margin-left: -0.8em;
+    }
+    /*----BODY----*/
+    .TExTO{
+        font-size: 10px;
+        margin-top: 1em;
+    }
+    /*----FOOTER----*/
+    footer{
+        width: 100%;
+    }
+    .logoimg img{
+        margin-left: 8em;
+        width: 15%;
+    }
+    .logotext{
+        width: 50%;
+        text-align: center;
+        margin-left: -4em;
+    }
+    .t1{
+        margin-left: 20em;
+        margin-top: -10em;
+        margin-bottom: 1em;
+    }
+    .contactos img{
+        width: 3.5%;
+        margin-left: 25em;
+    }
+    .contactos p{
+        margin-left: 27em;
+    }
+    .t2{
+        margin-left: 12em;
+        margin-top: 1em;
+    }
+    .contador{
+        margin-left: 21em;
+    }
+    .copy{
+        margin-top: 1em;
+    }
+}
+/*------------------------------------------------------------------------------*/
+/*.............................DE 767px A 500px..................................*/
+/*------------------------------------------------------------------------------*/
+@media screen and (min-width:500px) and (max-width:767px) {
+    /*----HEADER----*/
+    .titulo{
+        font-size: 35px;
+    }
+    .loesc img{
+        width: 11.5%;
+        margin-top: -6.5em;
+    }
+    .inicio{
+        margin-top: -0.2em;
+        position: relative;
+        display: flex;
+        margin-left: 0.1em;
+        font-size: 10px;
+    }
+    /*----BODY----*/
+    .TExTO{
+        font-size: 6px;
+        margin-top: 9em;
+    }
+    .TExTO li{
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+    .TExTO p{
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+    .subtitulo{
+        font-size: 30px;
+    }
+    .subtituloFIN p{
+        font-size: 30px;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+    /*----FOOTER----*/
+    footer{
+        width: 100%;
+    }
+    .logoimg img{
+        width: 30%;
+        margin-left: 11em;
+        margin-top: 2em;
+    }
+    .logotext{
+        font-size: 25px;
+        text-align: center;
+        margin-left: -5em;
+    }
+    .t1{
+        margin-left: 7.5em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .contactos img{
+        margin-left: 7em;
+        width: 5%;
+    }
+    .contactos p{
+        margin-left: 9em;
+    }
+    .t2{
+        margin-left: 6em;
+        margin-top: 1em;
+    }
+    .contador{
+        margin-left: 12em;
+    }
+    .copy{
+        margin-top: 1em;
+    }
+}
+/*------------------------------------------------------------------------------*/
+/*............................DE 499px A 320px.................................*/
+/*------------------------------------------------------------------------------*/
+@media screen and (min-width:320px) and (max-width:499px) {
+    /*----HEADER----*/
+    .titulo{
+        font-size: 25px;
+    }
+    .loesc img{
+        width: 11.5%;
+        margin-top: -5em;
+        margin-left: 0.5em;
+    }
+    .inicio{
+        margin-top: 0.8em;
+        position: relative;
+        display: flex;
+        margin-left: -1.6em;
+        font-size: 9px;
+    }
+    .nav li{
+        font-size: 15px;
+    }
+    /*----BODY----*/
+    .TExTO{
+        font-size: 6.5px;
+        margin-top: 8em;
+    }
+    .TExTO li{
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        font-size: 20px;
+    }
+    .TExTO p{
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        font-size: 20px;
+    }
+    .subtitulo{
+        font-size: 30px;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .subtituloFIN p{
+        font-size: 25px;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+    /*----FOOTER----*/
+    footer{
+        width: 100%;
+    }
+    .logoimg img{
+        width: 30%;
+        margin-left: 8.5em;
+        margin-top: 2em;
+    }
+    .logotext p{
+        text-align: center;
+        font-size: 15px;
+        margin-left: -0.8em;
+    }
+    .t1{
+        margin-left: 5.5em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .contactos img{
+        margin-left: 4.5em;
+        width: 6%;
+    }
+    .contactos p{
+        margin-left: 8em;
+        font-size: 15px;
+    }
+    .t2{
+        margin-left: 4.5em;
+        margin-top: 1em;
+    }
+    .contador{
+        margin-left: 9.5em;
+    }
+    .copy{
+        margin-top: 1em;
+    }
+}

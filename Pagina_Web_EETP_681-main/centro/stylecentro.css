@@ -1,0 +1,363 @@
+/* styles.css */
+body, h1, ul, li, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    height: 150px;
+    background-color: #161F30;
+    padding: 0 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 150px; /* Altura del logo */
+    max-height: 100%;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    transition: background-color 0.4s, border-radius 0.4s;
+    border-radius: 5px; /* Para un diseño consistente */
+}
+
+.menu a:hover {
+    background-color: #84B026;
+    border-radius: 15px;
+}
+
+.mostrar-menu, .esconder-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: color 0.4s;
+}
+
+#check {
+    display: none;
+}
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    height: 55vh; /* Altura del slider */
+    overflow: hidden; /* Ocultar el contenido que desborda */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Estilos para la sección Sobre Nosotros */
+.about-us {
+    padding: 50px 20px; /* Ajusta el padding según sea necesario */
+    text-align: center;
+    background-color: #F3F3F3; /* Fondo gris claro */
+}
+
+.about-us h2 {
+    font-size: 24px; /* Tamaño del título */
+    margin-bottom: 20px;
+    color: #2D4473; /* Color del título para coincidir con el esquema del sitio */
+}
+
+.about-us p {
+    font-size: 18px; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+    max-width: 800px; /* Ancho máximo del texto */
+    margin: 0 auto; /* Centra el texto */
+}
+.novedades {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #F3F3F3; /* Fondo gris claro */
+}
+
+.novedades h2 {
+    font-size: 24px;
+    color: #2D4473;
+    margin-bottom: 20px;
+}
+
+.novedades p {
+    font-size: 18px;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* destacados */
+#destacados{
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+}
+#destacados div{
+    padding: 20px 20px;
+    background-color: #161F30;
+    border-radius: 30px;
+    margin: 15px 15px;
+}
+.destacados-a{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+}
+.destacados-a img{
+    width: 85%;
+}
+.destacados-a a{
+    width: 30%;
+    justify-content: center;
+    text-align: center;
+}
+#destacados div h4{
+    color: white;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+#destacados div p{
+    color: white;
+    font-size: 18px;
+
+}
+.boton-saber-mas{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    border: 3px solid #84B026;
+    border-radius: 30px;
+    margin-top: 15px;
+    background-color: #84B026;
+    transition: all 0.4s;
+}
+.boton-saber-mas:hover{
+    border: 3px solid #84B026;
+    background-color: #161F30;
+    color: #84B026;
+}
+
+.autoridades {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #F3F3F3; /* Fondo gris claro */
+}
+
+.autoridades h2 {
+    font-size: 24px;
+    color: #2D4473;
+    margin-bottom: 20px;
+}
+
+.autoridades-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en nuevas líneas si es necesario */
+}
+
+.autoridad {
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 250px;
+}
+
+.autoridad h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.autoridad p {
+    font-size: 18px;
+    color: #666;
+}
+/* Estilos para la sección Contacto */
+.contacto {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #F3F3F3; /* Fondo gris claro */
+}
+
+.contacto h2 {
+    font-size: 24px;
+    color: #2D4473;
+    margin-bottom: 20px;
+}
+
+.info-contacto p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.info-contacto a {
+    color: #2D4473;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-contacto a:hover {
+    color: #1C2E57;
+}
+/* Estilos para el footer */
+footer {
+    background-color: #161F30;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 16px;
+    margin: 0;
+}
+.divider-container {
+    background-color: #F3F3F3; /* Color de fondo para el contenedor */
+    padding: 10px 0; /* Espaciado alrededor de la línea */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Opcional: centra el contenido verticalmente */
+}
+
+.divider {
+    width: 60%; /* Ajusta este valor según el ancho que desees */
+    max-width: 600px; /* Máximo ancho de la línea */
+    border-top: 2px solid #CCCCCC; /* Grosor y color de la línea */
+    opacity: 0.5; /* Transparencia opcional */
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #161F30; 
+    color: white; 
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    cursor: pointer;
+    font-size: 24px; 
+    display: none; 
+    transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #84B026; 
+}
+
+@media(max-width: 750px) {
+    .mostrar-menu, .esconder-menu {
+        display: block;
+    }
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2175BF;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 100px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    #check:checked ~ .menu {
+        right: 0;
+    }
+    #destacados {
+        flex-direction: column;
+    }
+    .autoridades-list {
+        flex-direction: column;
+    }
+
+    .autoridad {
+        width: 80%;
+        margin: 10px auto;
+    }
+        /* destacados */
+        #destacados{
+            flex-direction: column;
+        }
+        #destacados h4{
+            display: none;
+        }
+        #destacados p{
+            display: none;
+        }
+}

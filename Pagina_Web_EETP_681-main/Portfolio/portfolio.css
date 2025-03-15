@@ -1,0 +1,356 @@
+@font-face{
+    font-family:Header;
+    src: url(Extra\ Days.otf);
+}
+@font-face{
+    font-family:Body;
+    src: url(Letters\ for\ Learners.ttf);
+}
+
+* {
+    overflow-x: hidden;
+}
+
+
+/*ESTILOS GENERALES SISISISI*/
+header{
+    background-color: #384B70;
+ } 
+
+.TEXTOHEAD {
+    font-size: 800%;
+    font-family: Header;
+    text-align: center;
+    color: #FCFAEE;
+    height: 1.5em;
+    margin-top: 0.3em;
+}
+
+body {
+    background-color: #FCFAEE;
+    
+}
+
+.TODOTEXTO {
+    margin: 5%;
+    font-family: Body;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+h2 {
+   margin-top: 5px;
+    text-align: center;
+    background-color: #B8001F;
+    color:#FCFAEE;
+    font-size: xxx-large;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+p {
+    font-family: Body;
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: justify; 
+}
+
+.text-column {
+    flex: 1;
+    margin-right: 20px; 
+    text-align: justify;
+}
+
+.image-column {
+    flex: 1;
+    margin-right: -10px; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container2 {
+    display: flex;
+    gap: 20px; 
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0;
+}
+.cuadro {
+    background-color:#507687;
+    border-radius: 15px; 
+    overflow: hidden; 
+    text-align: center;
+    width: 400px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.cuadro img {
+    width: 100%; 
+    height: auto; 
+    text-align: center;
+}
+.texto {
+    padding: 10px;
+    font-size: 16px; 
+    text-align: center;
+    padding-top: 2px;
+}
+
+a {
+    color: #FCFAEE;
+    font-size: x-large;
+    text-decoration: none;
+}
+.container3 {
+    display: flex;
+    justify-content: center; 
+}
+.container3 img {
+    margin: 20px; 
+    max-width: 100%;
+}
+/*RESPONSIBIDAD ALAV*/
+
+/*PC NORMAL*/
+@media screen and (min-width:1024px) and (max-width:1365px) {
+
+}
+
+/*TABLE*/
+@media (min-width:421px) and (max-width:1023px){
+    header{
+        background-color: #384B70;
+    } 
+
+    .TEXTOHEAD {
+        font-size: 90px;
+        font-family: Header;
+        text-align: center;
+        color: #FCFAEE;
+        height: auto;
+
+    }
+
+    body {
+        background-color: #FCFAEE;
+    overflow-x: hidden;
+    }
+
+    .TODOTEXTO {
+        margin: 5%;
+        font-family: Body;
+        font-size: medium;
+        font-weight: bold;
+        text-align: justify;
+        margin-top: 5px;
+    }
+
+    h2 {
+        text-align: center;
+        background-color: #B8001F;
+        color:#FCFAEE;
+        font-size: 300%;
+    }
+    .container {
+        display: block;
+        justify-content: space-between;
+    }
+
+    p {
+        font-family: Body;
+        font-size: xx-large;
+        font-weight: bold;
+        text-align: center; 
+    }
+
+    .text-column {
+        flex: 1;
+        margin-right: 20px; 
+        text-align: justify;
+    }
+
+    .image-column {
+        flex: 1;
+        margin-right: -10px; 
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .container2 {
+        display:flex;
+        flex-wrap: wrap;
+        gap: 20px; 
+        text-align: center;
+        align-items: center;
+        justify-content: center; 
+        margin-top:  10px;
+    }
+    .cuadro {
+        background-color:#507687;
+        border-radius: 10px; 
+        overflow: hidden; 
+        align-items: center;
+        justify-content: center; 
+        width: 390px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+    .cuadro img {
+        width: 100%; 
+        height: auto; 
+        text-align: center;
+        align-items: center;
+        justify-content: center; 
+    }
+    .texto {
+        padding: 10px;
+        font-size: 16px; 
+        text-align: center;
+        padding-top: 2px;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    a {
+        color: #FCFAEE;
+        font-size: x-large;
+        text-decoration: none;
+    }
+    .container3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+    .container3 img {
+        margin: 20px; 
+        max-width: 100%;
+    }
+    }
+
+
+/*CELULAR*/
+@media only screen and (max-width: 420px) {
+    header{
+        background-color: #384B70;
+     } 
+    
+    .TEXTOHEAD {
+        font-size: 60px;
+        font-family: Header;
+        text-align: center;
+        color: #FCFAEE;
+        height: auto;
+    }
+    
+    body {
+        background-color: #FCFAEE;
+        overflow-x: hidden;
+    }
+    
+    .TODOTEXTO {
+        margin: 5%;
+        font-family: Body;
+        font-size: medium;
+        font-weight: bold;
+        text-align: justify;
+        margin-top: 5px;
+    }
+    
+    h2 {
+        text-align: center;
+        background-color: #B8001F;
+        color:#FCFAEE;
+        font-size: 290%;
+    }
+    .container {
+        display: block;
+        justify-content: space-between;
+    }
+    
+    p {
+        font-family: Body;
+        font-size: xx-large;
+        font-weight: bold;
+        text-align: center; 
+    }
+    
+    .text-column {
+        flex: 1;
+        margin-right: 20px; 
+        text-align: justify;
+    }
+    
+    .image-column {
+        flex: 1;
+        margin-right: -10px; 
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    .container2 {
+        display:flex;
+        flex-wrap: wrap;
+        gap: 20px; 
+        text-align: center;
+        align-items: center;
+        justify-content: center; 
+        margin-top:  10px;
+    }
+    .cuadro {
+        background-color:#507687;
+        border-radius: 10px; 
+        overflow: hidden; 
+        align-items: center;
+        justify-content: center; 
+        width: 390px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+    .cuadro img {
+        width: 100%; 
+        height: auto; 
+        text-align: center;
+        align-items: center;
+        justify-content: center; 
+    }
+    .texto {
+        padding: 10px;
+        font-size: 16px; 
+        text-align: center;
+        padding-top: 2px;
+        align-items: center;
+        justify-content: center; 
+    }
+    
+    a {
+        color: #FCFAEE;
+        font-size: x-large;
+        text-decoration: none;
+    }
+    .container3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+    .container3 img {
+        margin: 20px; 
+        max-width: 100%;
+    }
+}
+
