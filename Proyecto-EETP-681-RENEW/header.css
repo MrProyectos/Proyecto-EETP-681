@@ -1,0 +1,91 @@
+/* HEADER */
+
+header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    background: #0554F2;
+}
+
+header img {
+    width: 5.6em;
+    height: 100%;
+}
+
+header nav {
+    position: relative;
+}
+
+/* MENU */
+
+.menu-nav ul {
+ list-style:none;
+ margin:0;
+ padding:0;
+}
+
+/* items del menu */
+
+.menu-nav ul li {
+ background-color: #0554F2;
+}
+
+/* enlaces del menu */
+
+.menu-nav ul a {
+ display:block;
+ color:#fff;
+ text-decoration:none;
+ font-weight:400;
+ font-size:15px;
+ padding:10px;
+ font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ text-transform:uppercase;
+ letter-spacing:1px;
+}
+
+/* items del menu */
+
+.menu-nav ul li {
+ position:relative;
+ float:left;
+ margin:0;
+ padding:0;
+}
+
+/* efecto al pasar el ratón por los items del menu */
+
+.menu-nav ul li:hover {
+ background: #0540F2;
+}
+
+/* menu desplegable */
+
+.menu-nav ul ul {
+ display:none;
+ position:absolute;
+ top:100%;
+ left:0;
+ background:#eee;
+ padding:0;
+}
+
+/* items del menu desplegable */
+
+.menu-nav ul ul li {
+ float:none;
+ width:150px
+}
+
+/* enlaces de los items del menu desplegable */
+
+.menu-nav ul ul a {
+ line-height:120%;
+ padding:10px 15px;
+}
+
+/* items del menu desplegable al pasar el ratón */
+
+.menu-nav ul li:hover > ul {
+ display:block;
+}
