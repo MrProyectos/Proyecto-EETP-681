@@ -1,91 +1,83 @@
+/* IMPORTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* GENERAL */
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
 /* HEADER */
-
 header {
-    padding: 30px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    background: #0554F2;
+    background: #0583F2;
+    padding: 0 80px;
+    height: 120px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra sutil */
 }
 
+/* LOGO */
 header img {
-    width: 5.6em;
-    height: 100%;
+    height: 80px;
+    object-fit: contain;
 }
 
+/* NAV */
 header nav {
+    padding-right: 40px;
+}
+.menu-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-nav ul li {
     position: relative;
 }
 
-/* MENU */
-
-.menu-nav ul {
- list-style:none;
- margin:0;
- padding:0;
-}
-
-/* items del menu */
-
-.menu-nav ul li {
- background-color: #0554F2;
-}
-
-/* enlaces del menu */
-
 .menu-nav ul a {
- display:block;
- color:#fff;
- text-decoration:none;
- font-weight:400;
- font-size:15px;
- padding:10px;
- font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
- text-transform:uppercase;
- letter-spacing:1px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 10px;
+    transition: background 0.3s, border-radius 0.3s;
+    border-radius: 6px;
 }
 
-/* items del menu */
-
-.menu-nav ul li {
- position:relative;
- float:left;
- margin:0;
- padding:0;
+.menu-nav ul li:hover > a {
+    background-color: #0571cf;
 }
 
-/* efecto al pasar el ratón por los items del menu */
-
-.menu-nav ul li:hover {
- background: #0540F2;
-}
-
-/* menu desplegable */
-
+/* Dropdowns */
 .menu-nav ul ul {
- display:none;
- position:absolute;
- top:100%;
- left:0;
- background:#eee;
- padding:0;
+    display: none;
+    position: absolute;
+    margin-top: 8px;
+    top: 100%;
+    background: white;
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
-/* items del menu desplegable */
-
-.menu-nav ul ul li {
- float:none;
- width:150px
-}
-
-/* enlaces de los items del menu desplegable */
-
-.menu-nav ul ul a {
- line-height:120%;
- padding:10px 15px;
-}
-
-/* items del menu desplegable al pasar el ratón */
 
 .menu-nav ul li:hover > ul {
- display:block;
+    display: block;
+}
+
+.menu-nav ul ul li a {
+    color: #0583F2;
+    padding: 10px 15px;
+    display: block;
+    white-space: nowrap;
+}
+
+.menu-nav ul ul li:hover a {
+    background-color: #f0f0f0;
 }

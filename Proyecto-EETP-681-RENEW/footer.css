@@ -1,7 +1,43 @@
+/* IMPORTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 footer{
-    background-color:#0540F2;
-    border-radius: 180px 180px 0 0;
-    height: 500px;
+    background-color:#0583F2;
+    border-radius: 160px 160px 0 0;
+    height: 350px;
     bottom: 0px;
+    
 }
-   
+
+.logoescuelafooter{
+  display: flex;
+  align-items: left;
+  padding: 80px;
+}
+
+.texto{
+    font-size: 40px;
+    color:white;
+    text-align: center;
+    position: relative;
+    top:-50px;
+}
+
+.lineafondofooter{
+  position: sticky;
+  height: 10px;
+  background-color: rgb(172, 42, 42);
+  align-items: center;
+  top: 100%;
+}
+
+ .lineadecofooter {
+    width: 80%;
+    max-width: 800px;               
+    height: 10px;
+    background-color: white;
+    margin: -100px auto 20px auto;
+    border-radius: 12px;
+}
+
