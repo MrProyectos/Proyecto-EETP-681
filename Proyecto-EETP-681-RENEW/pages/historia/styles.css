@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+
+ /* DIVISOR */
+.div {
+  height: 120px;
+  width: 100%;
+}
+
+/* ESTILO DE CONTENIDO GENERAL */
+.contenido {
+    position: relative;
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+.contenido .seccion h2 {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(42, 42, 144);
+    padding-bottom: 40px;
+}
+
+.contenido .seccion p{
+    text-align: justify;
+    font-size: 28px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.contenido .seccion img {
+    max-width: 500px;
+}
+
+/* PRIMERA SECCIÓN */
+.contenido .seccion.primera {
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 80px 100px 0 100px;
+}
+
+/* SEGUNDA SECCIÓN */
+
+.contenido .seccion.segunda {
+    width: 100%;
+    background-color: #ededed;
+    padding: 80px 100px 0 100px;
+}
+
+.contenido .seccion .imagenes {
+    display: flex;
+}
+
+/* .contenido .seccion .imagenes .antiguo {
+    display: block;
+    text-align: center;
+    width: 50%;
+}
+
+.contenido .seccion .imagenes .antiguo img {
+    width: 80%;
+}
+
+.contenido .seccion .imagenes .actual {
+    display: block;
+    text-align: center;
+    width: 50%;
+}
+
+.contenido .seccion .imagenes .actual img {
+    width: 360px;
+    height: auto;
+} */
+
+.box-img {
+    width: 80%;
+    max-width: 500px;
+}

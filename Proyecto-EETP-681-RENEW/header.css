@@ -10,13 +10,16 @@
 
 /* HEADER */
 header {
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: #0583F2;
     padding: 0 80px;
     height: 120px;
+    width: 100%;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra sutil */
+    z-index: 5;
 }
 
 /* LOGO */
@@ -28,6 +31,7 @@ header img {
 /* NAV */
 header nav {
     padding-right: 40px;
+    z-index: 6;
 }
 .menu-nav ul {
     list-style: none;
@@ -76,6 +80,7 @@ header nav {
     padding: 10px 15px;
     display: block;
     white-space: nowrap;
+    text-align: justify;
 }
 
 .menu-nav ul ul li:hover a {
