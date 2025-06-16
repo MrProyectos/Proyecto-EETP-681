@@ -5,9 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
-    text-align: center;
 }
-
 
  /* DIVISOR */
 .div {
@@ -16,72 +14,79 @@
 }
 
 /* ESTILO DE CONTENIDO GENERAL */
-.contenido {
-    position: relative;
-    display: block;
-    justify-content: center;
-    text-align: center;
+.contenido .seccion {
+    width: 100%;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
 .contenido .seccion h2 {
+    font-size: 42px;
+    color: #2a2a90;
     text-align: center;
-    font-size: 40px;
-    color: rgb(42, 42, 144);
-    padding-bottom: 40px;
 }
 
-.contenido .seccion p{
-    text-align: justify;
-    font-size: 28px;
+.contenido .seccion p {
+    font-size: 18px;
     font-weight: 500;
-    padding-bottom: 20px;
-}
-
-.contenido .seccion img {
-    max-width: 500px;
+    max-width: 1000px;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 0 20px;
 }
 
 /* PRIMERA SECCIÓN */
-.contenido .seccion.primera {
-    width: 100%;
+.seccion.primera {
     background-color: #f4f4f4;
-    padding: 80px 100px 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.seccion.primera img {
+    max-width: 400px;
+    border-radius: 12px;
 }
 
 /* SEGUNDA SECCIÓN */
-
-.contenido .seccion.segunda {
-    width: 100%;
+.seccion.segunda {
     background-color: #ededed;
-    padding: 80px 100px 0 100px;
-}
-
-.contenido .seccion .imagenes {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* .contenido .seccion .imagenes .antiguo {
-    display: block;
-    text-align: center;
-    width: 50%;
+.imagenes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding: 0 20px 20px 0;
+  text-align: center;
 }
 
-.contenido .seccion .imagenes .antiguo img {
-    width: 80%;
+.imagenes .grupo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.contenido .seccion .imagenes .actual {
-    display: block;
-    text-align: center;
-    width: 50%;
+.imagenes .grupo h3 {
+  font-size: 20px;
+  color: #2a2a90;
+  margin-bottom: 10px;
 }
 
-.contenido .seccion .imagenes .actual img {
-    width: 360px;
-    height: auto;
-} */
-
-.box-img {
-    width: 80%;
-    max-width: 500px;
+.imagenes img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

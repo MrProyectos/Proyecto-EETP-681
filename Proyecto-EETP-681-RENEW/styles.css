@@ -88,17 +88,16 @@
  #directivos {
     width: 100%;
     padding: 15px;
-    background-color: #f4f4f4;
+    background-color: white;
  }
 
 .cajas {
   justify-content: center;
   display: flex;
+  flex-wrap: wrap;
 }
 
-  .directivo {
-    justify-items: center;
-    vertical-align: top;
+.directivo {
     width: 250px;
     height: 100px;
     margin: 10px;
@@ -106,7 +105,10 @@
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
   .directivo h3 {
     margin: 3px 0 2px;
