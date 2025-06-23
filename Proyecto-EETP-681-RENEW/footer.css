@@ -13,7 +13,7 @@ footer{
   text-align: center;
   width: 100%;
   max-width: 600px;
-  margin: 30px auto; /* Espaciado vertical y centrado */
+  
 }
 
 .lineatextofooter::before {
@@ -33,4 +33,23 @@ footer{
   width: 100%;
   background-color: rgb(172, 42, 42);
   top: 100%;
+}
+.logoescuelafooter{
+  justify-content: center;
+  text-align: left;
+}
+
+.logoescuelafooter img{
+  position: relative;
+  top: 80px;
+  left: 100px;
+}
+
+footer .texto b{
+  color: white;
+  position: relative;
+  justify-content: center;
+  bottom: 70px;
+  right: 50px;
+  font-size: 32px;
 }
