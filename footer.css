@@ -2,54 +2,73 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-footer{
-    background-color:#0583F2;
-    border-radius: 160px 160px 0 0;
-    height: 350px;
-    align-items: center;
+footer {
+  background-color: #0583F2;
+  border-radius: 160px 160px 0 0;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.lineatextofooter {
-  position: relative;
+
+.disfooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.logoescuelafooter {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.logoescuelafooter img {
+  height: 12rem;;
+  object-fit: contain;
+}
+
+.texto-footer {
+  flex: 2;
   text-align: center;
-  width: 100%;
-  max-width: 600px;
-  
+  color: white;
+  position: relative;
 }
 
-.lineatextofooter::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
+.texto-footer b {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 28px;
+}
+
+.lineatextofooter {
+  margin: 10px auto 15px auto;
+  height: 5px;
+  width: 90%;
   background-color: white;
-  z-index: 1;
+  border-radius: 4px;
 }
 
-.lineafondofooter{
-  position: sticky;
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+.socials a {
+  text-decoration: none;
+}
+
+.socials a img {
+  height: 2.1rem;
+}
+
+.lineafondofooter {
   height: 10px;
   width: 100%;
   background-color: rgb(172, 42, 42);
-  top: 100%;
-}
-.logoescuelafooter{
-  justify-content: center;
-  text-align: left;
-}
-
-.logoescuelafooter img{
-  position: relative;
-  top: 80px;
-  left: 100px;
-}
-
-footer .texto b{
-  color: white;
-  position: relative;
-  justify-content: center;
-  bottom: 70px;
-  right: 50px;
-  font-size: 32px;
 }
