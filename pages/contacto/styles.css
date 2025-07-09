@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+ /* DIVISOR */
+.div {
+  height: 120px;
+  width: 100%;
+}
+
+.contacto {
+  padding: 80px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 36px;
+  color: #2a2a90;
+  margin-bottom: 40px;
+}
+
+.formulario {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.campo label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.campo input,
+.campo textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s;
+  resize: none;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #0583f2;
+  outline: none;
+}
+
+button[type="submit"] {
+  padding: 12px 30px;
+  background-color: #0583f2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center;
+}
+
+button[type="submit"]:hover {
+  background-color: #0467c2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+  transform: scale(0.97);
+}

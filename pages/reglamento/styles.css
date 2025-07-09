@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    justify-content: center;
+}
+body .titulo-reglamento{
+    text-align: center;
+    padding: 10px;
+}
+.contenido{
+    text-align: justify;
+    line-height: 1.5;
+    padding: 10px;
+
+}
+/* DIVISOR */
+.div {
+    height: 120px;
+    width: 100%;
+}
