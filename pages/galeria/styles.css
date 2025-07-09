@@ -12,3 +12,61 @@
     height: 120px;
     width: 100%;
 } 
+
+/* Sección general */
+.galeria-cajas {
+  padding: 40px 20px;
+  background-color: #eef2f3;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.galeria-cajas h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* Grilla de tarjetas */
+.grilla-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 0 10px;
+}
+
+/* Caja individual */
+.caja-categoria {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.caja-categoria h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+/* Imágenes en miniatura */
+.contenedor-imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.contenedor-imagenes img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contenedor-imagenes img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+

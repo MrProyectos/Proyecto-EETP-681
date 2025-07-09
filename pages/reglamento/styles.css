@@ -13,6 +13,10 @@ body .titulo-reglamento{
     text-align: center;
     padding: 10px;
 }
+body .contenido{
+    padding-left: 25px;
+    padding-right: 25px;
+}
 .contenido{
     text-align: justify;
     line-height: 1.5;

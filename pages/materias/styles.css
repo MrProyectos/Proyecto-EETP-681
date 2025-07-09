@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* DIVISOR */
+.div {
+    height: 120px;
+    width: 100%;
+}
+
+.materias {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.materias h2 {
+    font-size: 40px;
+    color: #2a2a90;
+    margin-bottom: 40px;
+}
+
+.grupo-cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.tarjeta {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta h3 {
+    color: #0583F2;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.tarjeta ul {
+    list-style: disc inside;
+    padding-left: 0;
+}
+
+.tarjeta li {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #333;
+}
