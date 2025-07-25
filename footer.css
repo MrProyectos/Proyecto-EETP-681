@@ -1,11 +1,11 @@
 /* IMPORTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 footer {
-  background-color: #0583F2;
+  background-color: #0583f2;
   border-radius: 160px 160px 0 0;
-  height: 350px;
+  height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,7 +29,7 @@ footer {
 }
 
 .logoescuelafooter img {
-  height: 12rem;;
+  height: 12rem;
   object-fit: contain;
 }
 
@@ -41,7 +41,7 @@ footer {
 }
 
 .texto-footer b {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 28px;
 }
 
