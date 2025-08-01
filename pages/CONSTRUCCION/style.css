@@ -1,0 +1,55 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f4f4;
+  height: 100%;
+}
+
+.construction-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  text-align: center;
+}
+
+.construction-content {
+  max-width: 600px;
+}
+
+.construction-content h1 {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  margin-bottom: 0.5rem;
+}
+
+.construction-content p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.uc-icon {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+  transform-origin: center;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

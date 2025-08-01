@@ -1,30 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }
-body{
-    justify-content: center;
+
+/* DIVISOR */
+.div {
+  height: 120px;
+  width: 100%;
 }
-body .titulo-reglamento{
+/*.reglamento h1{
     text-align: center;
     padding: 10px;
 }
-body .contenido{
-    padding-left: 25px;
-    padding-right: 25px;
+.reglamento h2{
+    text-align: center;
 }
-.contenido{
-    text-align: justify;
-    line-height: 1.5;
+.titulo-reglamento{
+    text-align: center;
     padding: 10px;
-
 }
-/* DIVISOR */
-.div {
-    height: 120px;
-    width: 100%;
+.reglamento .contenido{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+*/
+.reglamento {
+  justify-items: center;
+  padding-top: 40px;
+}
+.reglamento .contenido {
+  max-width: 900px; /* Limita ancho en pantallas grandes */
+  width: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+  text-align: justify; /* Justificar texto */
+  line-height: 1.6; /* Espaciado entre líneas */
+  padding-bottom: 40px;
+}
+
+.reglamento h1,
+.reglamento h2,
+.reglamento h3,
+.reglamento h4 {
+  text-align: center; /* Centrar títulos */
+  padding: 5px;
 }

@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 footer {
+  width: 100%;
   background-color: #0583f2;
   border-radius: 160px 160px 0 0;
   height: 280px;
