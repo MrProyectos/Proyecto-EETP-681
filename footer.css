@@ -69,7 +69,23 @@ footer {
 }
 
 .lineafondofooter {
-  height: 10px;
+  display: flex;
+  height: 25px;
   width: 100%;
   background-color: rgb(172, 42, 42);
+
+  justify-content: center;
+  text-align: center;
+}
+.lineafondofooter p a {
+  text-decoration: none;
+  padding-left: 5px;
+  color: #ffffff;
+}
+.lineafondofooter p {
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
