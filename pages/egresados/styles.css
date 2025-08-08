@@ -1,13 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }
 
 .div {
-    height: 120px;
-    width: 100%; 
+  height: 160px;
+  width: 100%;
+}
+
+.titulo {
+  font-size: 42px;
+  color: #2a2a90;
+  text-align: center;
+}
+
+.contenedor-cajas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 20px 120px; /* espacio para header y footer */
+  gap: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.caja-imagen {
+  position: relative;
+  width: 450px;
+  height: 250px;
+  margin: 20px;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+.caja-imagen:hover {
+  transform: translateY(-5px);
+}
+
+.caja-imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  height: 250px; /* Fijás el alto de la imagen */
+  border-radius: 10px 10px 0px 0px;
+}
+
+.caja-imagen .etiqueta-caja {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #e91e63; /* Color fucsia */
+  color: white;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 3px;
+  z-index: 2;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.caja-imagen .subtit-imagen {
+  background-color: #0571cf; /* Azul oscuro */
+
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 0px 0px 10px 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
