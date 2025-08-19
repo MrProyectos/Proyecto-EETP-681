@@ -1,112 +1,148 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* ====== ESTILOS EFEMÉRIDES ====== */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --azul: #2a4b9b;
+  --panel: #eaf0fa;
+  --sombra: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
-    color: #333;
-    justify-items: center;
+  background-color: #f5f5f5;
+  color: #333;
 }
+
 .div {
-    height: 120px;
-    width: 100%; 
+  /* separador por header fijo */
+  height: 120px;
+  width: 100%;
 }
 
+/* ====== CONTENEDOR ====== */
 .contenedor-efemerides {
-    max-width: 800px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  width: min(1100px, 100% - 32px);
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
+/* ====== TARJETAS ====== */
 .rectangulo-efemerides {
-    display: flex;
-    background-color: #eaf0fa; /* Diferente del fondo */
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  align-items: stretch;
+  background-color: var(--panel);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .rectangulo-efemerides:hover {
-    transform: translateY(-5px);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
 .rectangulo-efemerides img {
-    width: 30%;
-    height: 100%; /* La imagen toma la altura del rectángulo */
-    object-fit: cover; /* Se ajusta y recorta lo que sobra */
-    display: block; /* Evita espacios fantasmas */
-    border-radius: 15px; 
-    align-self: center; 
+  width: 38%;
+  max-height: 260px; /* controla alto en desktop */
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .contenido-efemerides {
-    padding: 20px;
-    width: 50%;
-    display: flex;
+  padding: 20px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.etiqueta-efemerides {
+  align-self: flex-start;
+  display: inline-block;
+  font-weight: 700;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  background-color: var(--azul);
+  letter-spacing: 0.2px;
+  font-size: 14px;
+}
+
+.contenido-efemerides p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* ====== AJUSTES FINOS POR TARJETA (opcional) ====== */
+/* Si querés ajustar cada imagen individualmente, descomentá y adaptá: */
+/*
+.rectangulo-efemerides:nth-of-type(1) img { width: 42%; }
+.rectangulo-efemerides:nth-of-type(2) img { width: 40%; }
+.rectangulo-efemerides:nth-of-type(3) img { width: 40%; }
+*/
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 992px) {
+  .contenedor-efemerides {
+    width: min(900px, 100% - 24px);
+    gap: 24px;
+  }
+
+  .rectangulo-efemerides {
     flex-direction: column;
-    justify-content: center;
-}
-.etiqueta-efemerides {
-    display: inline-block;
-    font-weight: bold;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-.etiqueta-efemerides {
-    background-color: #2a4b9b; /* Azul */
-    text-align: center;
-}
-p {
-    line-height: 1.5;
-}
-/*--- AJUSTE DE TAMAÑO DE IMAGENES DE LOS RECTANGULOS ---*/
+  }
 
-.rectangulo-efemerides:nth-of-type(1) img {         /*MEDIANTE ESTE METODO SELECCIONAS LAS IMAGENE POR SEPARADO PARA */
-    width: 42%;                                     /*MODIFICARLAS MEDIANTE SU ORDEN - TE AHORRAS HACER MIL CLASES*/
-    height: auto;
-}
-.rectangulo-efemerides:nth-of-type(2) img {         
-    width: 40%;                                     
-    height: auto;
-}
-.rectangulo-efemerides:nth-of-type(3) img {         
-    width: 40%;                                     
-    height: auto;
-}
-.rectangulo-efemerides:nth-of-type(4) img {         
-    width: 38%;                                     
-    height: auto;
-}
-.rectangulo-efemerides:nth-of-type(5) img {         
-    width: 35%;                                     
-    height: auto;
-}
-.rectangulo-efemerides:nth-of-type(6) img {         
-    width: 40%;                                     
-    height: auto;
-}
-.rectangulo-efemerides:nth-of-type(7) img {         
-    width: 40%;                                     
-    height: auto;
-}
-.rectangulo-efemerides:nth-of-type(8) img {         
-    width: 38%;                                     
-    height: auto;
-}
-/*--- ---*/
-footer {
-    width: 100%;
+  .rectangulo-efemerides img {
+    width: 100% !important;
+    max-height: 220px; /* alto cómodo en móvil */
+    border-radius: 16px 16px 0 0;
+  }
+
+  .contenido-efemerides {
+    padding: 16px 18px;
+  }
+
+  .etiqueta-efemerides {
+    font-size: 13px;
+  }
+
+  .contenido-efemerides p {
+    font-size: 15px;
+  }
 }
 
+/* ====== PANTALLAS GRANDES ====== */
+@media (min-width: 1400px) {
+  .contenedor-efemerides {
+    width: min(1280px, 100% - 64px);
+    gap: 40px;
+  }
+
+  .rectangulo-efemerides img {
+    max-height: 300px;
+  }
+
+  .contenido-efemerides p {
+    font-size: 18px;
+  }
+}
+
+/* ====== TABLET HORIZONTAL (ajuste fino) ====== */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .rectangulo-efemerides img {
+    max-height: 200px;
+  }
+}

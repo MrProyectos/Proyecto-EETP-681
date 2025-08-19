@@ -88,3 +88,33 @@ footer {
   text-align: center;
   align-items: center;
 }
+
+/* Responsive Footer */
+@media (max-width: 992px) {
+  footer {
+    height: auto;
+    padding: 40px 20px;
+    border-radius: 80px 80px 0 0;
+  }
+
+  .disfooter {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logoescuelafooter img {
+    height: 8rem;
+  }
+
+  .texto-footer b {
+    font-size: 20px;
+  }
+
+  .socials {
+    gap: 1.5rem;
+  }
+
+  .lineafondofooter p {
+    display: none;
+  }
+}

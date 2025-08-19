@@ -1,33 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* ====== ESTILOS GENERALES ====== */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }
 
- /* DIVISOR */
 .div {
   height: 120px;
   width: 100%;
 }
 
+/* ====== SECCIÓN CONTACTO ====== */
 .contacto {
-  padding: 80px 20px;
-  background-color: #f4f4f4;
+  background-color: #f9f9f9;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .contacto h2 {
   font-size: 36px;
   color: #2a2a90;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .formulario {
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -36,7 +41,7 @@
 .campo {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  align-items: flex-start;
 }
 
 .campo label {
@@ -47,39 +52,60 @@
 
 .campo input,
 .campo textarea {
+  width: 100%;
   padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   font-size: 16px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
   transition: border 0.3s;
-  resize: none;
 }
 
 .campo input:focus,
 .campo textarea:focus {
-  border-color: #0583f2;
   outline: none;
+  border-color: #0583f2;
 }
 
 button[type="submit"] {
-  padding: 12px 30px;
   background-color: #0583f2;
   color: white;
   border: none;
-  border-radius: 8px;
+  padding: 14px;
   font-size: 16px;
-  font-weight: 600;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  align-self: center;
+  transition: background 0.3s;
 }
 
 button[type="submit"]:hover {
-  background-color: #0467c2;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  background-color: #046ac5;
 }
 
-button[type="submit"]:active {
-  transform: scale(0.97);
+/* ====== RESPONSIVE ====== */
+@media (max-width: 992px) {
+  .contacto {
+    padding: 40px 15px;
+  }
+
+  .contacto h2 {
+    font-size: 28px;
+  }
+
+  .formulario {
+    padding: 20px;
+  }
+
+  .campo label {
+    font-size: 14px;
+  }
+
+  .campo input,
+  .campo textarea {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 12px;
+  }
 }

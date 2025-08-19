@@ -1,88 +1,149 @@
 /* IMPORTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* GENERAL */
 
 * {
-    font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 /* HEADER */
 header {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #0583F2;
-    padding: 0 80px;
-    height: 120px;
-    width: 100%;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra sutil */
-    z-index: 5;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0583f2;
+  padding: 0 80px;
+  height: 120px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  z-index: 5;
 }
 
 /* LOGO */
 header img {
-    height: 80px;
-    object-fit: contain;
+  height: 80px;
+  object-fit: contain;
 }
 
 /* NAV */
 header nav {
-    padding-right: 40px;
-    z-index: 6;
+  padding-right: 40px;
+  z-index: 6;
 }
 .menu-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
 .menu-nav ul li {
-    position: relative;
+  position: relative;
 }
 
 .menu-nav ul a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 8px 10px;
-    transition: background 0.3s, border-radius 0.3s;
-    border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 10px;
+  transition: background 0.3s, border-radius 0.3s;
+  border-radius: 6px;
 }
 
 .menu-nav ul li:hover > a {
-    background-color: #0571cf;
+  background-color: #0571cf;
 }
 
 /* Dropdowns */
 .menu-nav ul ul {
-    display: none;
-    position: absolute;
-    margin-top: 8px;
-    top: 100%;
-    background: white;
-    padding: 0;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: none;
+  position: absolute;
+  margin-top: 8px;
+  top: 100%;
+  background: white;
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .menu-nav ul li:hover > ul {
-    display: block;
+  display: block;
 }
 
 .menu-nav ul ul li a {
-    color: #0583F2;
-    padding: 10px 15px;
-    display: block;
-    white-space: nowrap;
-    text-align: justify;
+  color: #0583f2;
+  padding: 10px 15px;
+  display: block;
+  white-space: nowrap;
+  text-align: justify;
 }
 
 .menu-nav ul ul li:hover a {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
+}
+
+/* Botón Hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  z-index: 1000;
+}
+
+/* Responsive Header */
+@media (max-width: 992px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-nav {
+    padding: 0;
+    position: fixed;
+    top: 120px;
+    left: 200%;
+    width: 100%;
+    height: calc(100vh - 120px);
+    background: rgba(0, 136, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: left 0.5s ease-in-out;
+    padding-top: 20px;
+  }
+
+  .menu-nav.active {
+    text-align: center;
+    left: 0;
+  }
+
+  .menu-nav ul {
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .menu-nav ul ul {
+    text-align: center;
+    justify-content: center;
+    position: static;
+    background: none;
+    box-shadow: none;
+  }
+
+  .menu-nav ul ul li a {
+    color: white;
+    font-size: 14px;
+  }
 }

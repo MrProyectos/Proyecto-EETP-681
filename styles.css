@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
 }
 
 .div {
@@ -15,81 +15,80 @@
 
 /* Presentación */
 .presentacion {
-    background-image: url(assets/img/escuela.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
+  background-image: url(assets/img/escuela.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
 }
 
 .presentacion::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.25); /* Oscurecimiento suave */
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25); /* Oscurecimiento suave */
+  z-index: 1;
 }
 
 .name-box {
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    position: relative;
-    z-index: 2; /* Para que quede arriba del overlay */
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2; /* Para que quede arriba del overlay */
 }
 
 .name-box h1 {
-    font-size: 5vw;
-    font-weight: 800;
-    margin: 0;
-
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 5vw;
+  font-weight: 800;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .name-box h2 {
-    font-size: 2vw;
-    font-weight: 400;
-    margin: 10px 0 0 0;
-    font-style: italic;
+  font-size: 2vw;
+  font-weight: 400;
+  margin: 10px 0 0 0;
+  font-style: italic;
 }
 
 /* Seccion Nuestros Inicios */
-.txt{
-    background-color: #f4f4f4;
-    position: relative;
-    padding: 80px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.txt {
+  background-color: #f4f4f4;
+  position: relative;
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .txt div {
-    position: relative;
-    width: 1300px;
+  position: relative;
+  width: 1300px;
 }
 
-.txt h3{
-    text-align: center;
-    font-size: 40px;
-    color: rgb(42, 42, 144);
-    padding-bottom: 20px;
+.txt h3 {
+  text-align: center;
+  font-size: 40px;
+  color: rgb(42, 42, 144);
+  padding-bottom: 20px;
 }
-.txt p{
-    font-size: 28px;
-    font-weight: 500;
+.txt p {
+  font-size: 28px;
+  font-weight: 500;
 }
 
- #directivos {
-    width: 100%;
-    padding: 15px;
-    background-color: white;
- }
+#directivos {
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+}
 
 .cajas {
   justify-content: center;
@@ -98,26 +97,59 @@
 }
 
 .directivo {
-    width: 250px;
-    height: 100px;
-    margin: 10px;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  width: 250px;
+  height: 100px;
+  margin: 10px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: inline;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-  .directivo h3 {
-    margin: 3px 0 2px;
-    color: #333;
+.directivo h3 {
+  margin: 3px 0 2px;
+  color: #333;
+}
+
+.directivo p {
+  margin: 2px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+/* Responsive General */
+@media (max-width: 992px) {
+  .presentacion {
+    height: 60vh;
+    background-position: center;
   }
 
-  .directivo p {
-    margin: 2px 0;
-    font-size: 15px;
-    color: #555;
+  .name-box h1 {
+    font-size: 8vw;
   }
 
+  .name-box h2 {
+    font-size: 4vw;
+  }
+
+  .txt {
+    padding: 40px;
+  }
+
+  .txt p {
+    font-size: 18px;
+  }
+
+  #directivos .cajas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .directivo {
+    width: 90%;
+    height: auto;
+  }
+}
