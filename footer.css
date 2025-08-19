@@ -92,7 +92,7 @@ footer {
 /* Responsive Footer */
 @media (max-width: 992px) {
   footer {
-    height: auto;
+    height: 250px;
     padding: 40px 20px;
     border-radius: 80px 80px 0 0;
   }
@@ -103,7 +103,7 @@ footer {
   }
 
   .logoescuelafooter img {
-    height: 8rem;
+    height: 6rem;
   }
 
   .texto-footer b {
