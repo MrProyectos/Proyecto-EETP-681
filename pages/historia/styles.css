@@ -41,7 +41,7 @@
 
 /* PRIMERA SECCIÓN */
 .seccion.primera {
-  background-color: #f4f4f4;
+  background-color: #ededed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +57,7 @@
 
 /* SEGUNDA SECCIÓN */
 .seccion.segunda {
-  background-color: #ededed;
+  background-color: #f4f4f4;
   display: flex;
   flex-direction: column;
   align-items: center;
