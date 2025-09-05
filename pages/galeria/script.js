@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "assets/img/Campamentos/camp2.jpg",
       "assets/img/Campamentos/camp3.jpg",
       "assets/img/Campamentos/camp4.jpg",
-      "assets/img/Campamentos/camp5.jpg"
+      "assets/img/Campamentos/camp5.jpg",
     ],
     Bicicleteadas: [
       "assets/img/Bicicleteadas/bici1.JPEG",
@@ -29,18 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
       "assets/img/Bicicleteadas/bici8.JPG",
       "assets/img/Bicicleteadas/bici9.JPG",
       "assets/img/Bicicleteadas/bici10.JPG",
-      "assets/img/Bicicleteadas/bici11.JPG"
+      "assets/img/Bicicleteadas/bici11.JPG",
     ],
-    Escuela:[
+    Escuela: [
       "assets/img/Escuela/esca1.JPG",
       "assets/img/Escuela/esca2.JPG",
       "assets/img/Escuela/esca3.jpeg",
       "assets/img/Escuela/esca4.jpeg",
       "assets/img/Escuela/esca5.jpeg",
       "assets/img/Escuela/esca6.jpeg",
-      "assets/img/Escuela/esca7.jpeg"
+      "assets/img/Escuela/esca7.jpeg",
     ],
-    Estudiantinas:[
+    Estudiantinas: [
       "assets/img/Estudiantinas/priv1.JPEG",
       "assets/img/Estudiantinas/priv2.JPEG",
       "assets/img/Estudiantinas/priv3.JPEG",
@@ -55,9 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
       "assets/img/Estudiantinas/priv12.jpeg",
       "assets/img/Estudiantinas/priv13.jpeg",
       "assets/img/Estudiantinas/priv14.jpeg",
-      "assets/img/Estudiantinas/priv14.JPG"
+      "assets/img/Estudiantinas/priv14.JPG",
     ],
-    Expotec:[
+    Expotec: [
       "assets/img/Expotec/peñt1.jpg",
       "assets/img/Expotec/peñt2.jpg",
       "assets/img/Expotec/peñt3.jpg",
@@ -66,9 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
       "assets/img/Expotec/peñt6.jpg",
       "assets/img/Expotec/peñt7.jpg",
       "assets/img/Expotec/peñt8.jpg",
-      "assets/img/Expotec/peñt9.jpg"
+      "assets/img/Expotec/peñt9.jpg",
     ],
-    Inauguracion:[
+    Inauguracion: [
       "assets/img/Inauguracion/inag1.JPG",
       "assets/img/Inauguracion/inag2.JPG",
       "assets/img/Inauguracion/inag3.JPG",
@@ -79,14 +79,14 @@ document.addEventListener("DOMContentLoaded", () => {
       "assets/img/Inauguracion/inag8.jpg",
       "assets/img/Inauguracion/inag9.JPG",
     ],
-    MaratonLectura:[
+    MaratonLectura: [
       "assets/img/MaratonLectura/lect1.jpeg",
       "assets/img/MaratonLectura/lect2.jpeg",
       "assets/img/MaratonLectura/lect3.jpeg",
       "assets/img/MaratonLectura/lect4.jpeg",
       "assets/img/MaratonLectura/lect5.jpeg",
       "assets/img/MaratonLectura/lect6.jpeg",
-      "assets/img/MaratonLectura/lect7.jpeg"
+      "assets/img/MaratonLectura/lect7.jpeg",
     ],
     Santafejuega: [
       "assets/img/Santafejuega/Sjuega1.JPG",
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "assets/img/Santafejuega/Sjuega11.JPG",
       "assets/img/Santafejuega/Sjuega12.JPG",
       "assets/img/Santafejuega/Sjuega13.jpeg",
-      "assets/img/Santafejuega/Sjuega14.JPG"
+      "assets/img/Santafejuega/Sjuega14.JPG",
     ],
     Tecnomate: [
       "assets/img/Tecnomate/tecm1.1.jpg",
@@ -118,9 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
       "assets/img/Tecnomate/tecm11.jpg",
       "assets/img/Tecnomate/tecm12.jpg",
       "assets/img/Tecnomate/tecm13.jpg",
-      "assets/img/Tecnomate/tecm14.jpg"
+      "assets/img/Tecnomate/tecm14.jpg",
     ],
-    
+
     ViajeCordoba: [
       "assets/img/ViajeCordoba/cord1.JPG",
       "assets/img/ViajeCordoba/cord2.JPG",
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "assets/img/ViajeCordoba/cord10.JPG",
       "assets/img/ViajeCordoba/cord11.JPG",
       "assets/img/ViajeCordoba/cord12.JPG",
-      "assets/img/ViajeCordoba/cord13.JPG"
+      "assets/img/ViajeCordoba/cord13.JPG",
     ],
     ViajeMendoza: [
       "assets/img/ViajeMendoza/mend1.jpg",
@@ -165,10 +165,10 @@ document.addEventListener("DOMContentLoaded", () => {
       "assets/img/ViajeMendoza/mend28.jpg",
       "assets/img/ViajeMendoza/mend29.jpg",
       "assets/img/ViajeMendoza/mend30.jpg",
-    ]
+    ],
   };
 
-  const modal = document.getElementById("modal");
+  const modal = document.getElementById("modal-galeria");
   const imgGrande = document.getElementById("img-grande");
   const cerrar = modal.querySelector(".cerrar");
   const prev = modal.querySelector(".prev");
