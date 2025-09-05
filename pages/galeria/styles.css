@@ -5,7 +5,6 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* DIVISOR */
 .div {
   height: 160px;
   width: 100%;
@@ -15,7 +14,9 @@
   font-size: 42px;
   color: #2a2a90;
   text-align: center;
+  margin-bottom: 30px;
 }
+
 .img-tam {
   height: 200px;
 }
@@ -24,9 +25,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 30px 20px 120px; /* espacio para header y footer */
+  padding: 30px 20px 120px;
   gap: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
 }
 
@@ -37,19 +37,18 @@
   margin: 20px;
   border-radius: 10px 10px 0px 0px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
+
 .caja-imagen:hover {
   transform: translateY(-5px);
 }
 
 .caja-imagen img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 250px;
   object-fit: cover;
-  height: 250px; /* Fijás el alto de la imagen */
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -57,7 +56,7 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color: #e91e63; /* Color fucsia */
+  background-color: #e91e63;
   color: white;
   padding: 10px 20px;
   font-size: 13px;
@@ -65,19 +64,94 @@
   text-transform: uppercase;
   border-radius: 3px;
   z-index: 2;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .caja-imagen .subtit-imagen {
-  background-color: #0571cf; /* Azul oscuro */
+  background-color: #0571cf;
   color: white;
   padding: 10px;
   font-size: 14px;
   font-weight: 500;
   text-align: center;
-  display: flex;
+  border-radius: 0px 0px 10px 10px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  border-radius: 0px 0px 10px 10px;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 80vw;
+  max-height: 80vh;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 42px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  z-index: 10001;
+}
+
+.prev {
+  left: 30px;
+}
+.next {
+  right: 30px;
+}
+
+.modal-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.cerrar {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 10002;
 }
