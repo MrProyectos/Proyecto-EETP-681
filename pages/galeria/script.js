@@ -1,11 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // DEFINÍ ACÁ las imágenes (rutas relativas desde tu index.html)
   const imagenes = {
-    folder1: [
-      "img/folder1/2009.jpg",
-      "img/folder1/2011.jpg",
-      "img/folder1/2017.jpg",
-    ],
+    Construccion: ["galeria/assets/"],
     folder2: [
       "img/folder2/2009.jpg",
       "img/folder2/2022.jpeg",
