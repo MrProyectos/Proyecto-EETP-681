@@ -82,7 +82,7 @@
             <a>Contacto</a>
             <ul>
               <li>
-                <a href="../inscripciones/inscripciones.html">Inscripciones</a>
+                <a href="#" onclick="abrirModalInscripcion()">Inscripciones</a>
               </li>
               <li><a href="../centro/centro.html">Centro de Estudiantes</a></li>
               <li><a href="../contacto/contacto.html">Contactanos</a></li>
@@ -259,6 +259,34 @@
         >
       </p>
     </div>
+   
+        <!-- Ventana emergente (Modal) -->
+    <div id="modalInscripcion" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Inscripción</h2>
+        <p>
+          Descargá el formulario de inscripción en PDF desde el siguiente botón:
+        </p>
+
+        <!-- Botón de descarga -->
+        <a
+          href="assets/pdf/Inscripcion-EETP-681.pdf"
+          download
+          class="btn-descargar"
+          >📄 Descargar PDF</a
+        >
+
+        <hr style="margin: 20px 0" />
+
+        <!-- Botón de redirección -->
+        <a href="../inscripciones/inscripciones.html" class="btn-redirigir"
+          >➡️ Completar inscripción online</a
+        >
+      </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="../../script.js"></script>
 
 </html>

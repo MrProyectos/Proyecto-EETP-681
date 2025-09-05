@@ -101,7 +101,7 @@
             <a>Contacto</a>
             <ul>
               <li>
-                <a href="../inscripciones/inscripciones.html">Inscripciones</a>
+                <a href="#" onclick="abrirModalInscripcion()">Inscripciones</a>
               </li>
               <li><a href="../centro/centro.html">Centro de Estudiantes</a></li>
               <li><a href="../contacto/contacto.html">Contactanos</a></li>
@@ -122,82 +122,83 @@
 
       <div class="contenedor-cajas">
          <!-- CONSTRUCCION -->
-        <div class="caja-imagen">
+        <div class="caja-imagen" data-folder="construccion">
           <div class="etiqueta-caja">GALERIAS</div>
           <img class="img-tam" src="assets/img/Construccion/cont4.JPG" alt="CONSTRUCCION" />
           <div class="subtit-imagen">CONSTRUCCION</div>
         </div>
 
          <!-- INAUGURACION -->
-      <div class="caja-imagen">
+      <div class="caja-imagen" data-folder="inauguracion">
           <div class="etiqueta-caja">GALERIAS</div>
           <img class="img-tam" src="assets/img/Inauguracion/inag1.JPG" alt="INAUGURACION" />
           <div class="subtit-imagen">INAUGURACION</div>
+          <div class="caja-imagen" data-folder="Inauguracion">
         </div>
 
         <!-- ESCUELA -->
-        <div class="caja-imagen">
+        <div class="caja-imagen" data-folder="escuela">
           <div class="etiqueta-caja">GALERIAS</div>
           <img class="img-tam" src="assets/img/Escuela/esca1.JPG" alt="ESCUELA" />
           <div class="subtit-imagen">ESCUELA</div>
         </div>
 
         <!-- BICICLETEADAS -->
-        <div class="caja-imagen">
+        <div class="caja-imagen" data-folder="bicicleteadas">
           <div class="etiqueta-caja">GALERIAS</div>
           <img class="img-tam" src="assets/img/Bicicleteadas/bici1.JPEG" alt="BICICLETEADA" />
           <div class="subtit-imagen">BICICLETEADAS</div>
         </div>
        <!-- CAMPAMENTOS -->
-        <div class="caja-imagen">
+        <div class="caja-imagen" data-folder="campamentos">
           <div class="etiqueta-caja">GALERIAS</div>
           <img class="img-tam" src="assets/img/Campamentos/camp1.jpg" alt="CAMPAMENTOS" />
           <div class="subtit-imagen">CAMPAMENTOS</div>
         </div>
       
        <!-- ESTUDIANTES -->
-        <div class="caja-imagen">
+        <div class="caja-imagen" data-folder="estudiantes">
           <div class="etiqueta-caja">GALERIAS</div>
           <img class="img-tam" src="assets/img/Estudiantinas/priv1.JPEG" alt="ESTUDIANTES" />
           <div class="subtit-imagen">ESTUDIANTES</div>
         </div>
        <!-- EXPOTECH -->
-        <div class="caja-imagen">
+        <div class="caja-imagen" data-folder="expotech">
           <div class="etiqueta-caja">GALERIAS</div>
           <img class="img-tam" src="assets/img/Expotec/peñt5.jpg" alt="EXPOTEC" />
           <div class="subtit-imagen">EXPOTECH</div>
         </div>
 
       <!-- MARATON LECTURA -->
-        <div class="caja-imagen">
+        <div class="caja-imagen" data-folder="maratonlectura">
           <div class="etiqueta-caja">GALERIAS</div>
           <img class="img-tam" src="assets/img/MaratonLectura/lect1.jpeg" alt="MARATON DE LECTURA" />
           <div class="subtit-imagen">MARATON DE LECTURA</div>
         </div>
 
       <!-- SANTA FE JUEGA -->
-        <div class="caja-imagen">
+        <div class="caja-imagen" data-folder="santafejuega">
           <div class="etiqueta-caja">GALERIAS</div>
           <img class="img-tam" src="assets/img/Santafejuega/Sjuega1.JPG" alt="SANTA FE JUEGA" />
           <div class="subtit-imagen">SANTA FE JUEGA</div>
         </div>
 
       <!-- TECNOMATE -->
-        <div class="caja-imagen">
+        <div class="caja-imagen" data-folder="tecnomate">
           <div class="etiqueta-caja">GALERIAS</div>
           <img class="img-tam" src="assets/img/Tecnomate/tecm1.1.jpg" alt="TECNOMATE" />
           <div class="subtit-imagen">TECNOMATE</div>
         </div>
 
       <!-- VIAJE A CORDOBA -->
-        <div class="caja-imagen">
+        <div class="caja-imagen" data-folder="cordoba">
           <div class="etiqueta-caja">GALERIAS</div>
           <img class="img-tam" src="assets/img/ViajeCordoba/cord1.JPG" alt="VIAJE A CORDOBA" />
           <div class="subtit-imagen">VIAJE A CORDOBA</div>
         </div>
 
       <!-- VIAJE A MENDOZA -->
-        <div class="caja-imagen">
+        <div class="caja-imagen"data-folder="mendoza">
           <div class="etiqueta-caja">GALERIAS</div>
           <img class="img-tam" src="assets/img/ViajeMendoza/mend1.jpg" alt="VIAJE A MENDOZA" />
           <div class="subtit-imagen">VIAJE A MENDOZA</div>
@@ -252,7 +253,35 @@
         >
       </p>
     </div>
+    
+        <!-- Ventana emergente (Modal) -->
+    <div id="modalInscripcion" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Inscripción</h2>
+        <p>
+          Descargá el formulario de inscripción en PDF desde el siguiente botón:
+        </p>
+
+        <!-- Botón de descarga -->
+        <a
+          href="assets/pdf/Inscripcion-EETP-681.pdf"
+          download
+          class="btn-descargar"
+          >📄 Descargar PDF</a
+        >
+
+        <hr style="margin: 20px 0" />
+
+        <!-- Botón de redirección -->
+        <a href="../inscripciones/inscripciones.html" class="btn-redirigir"
+          >➡️ Completar inscripción online</a
+        >
+      </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="../../script.js"></script>
 
     <!-- Lightbox JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>

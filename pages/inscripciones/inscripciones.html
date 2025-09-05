@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inscripción 1er Año Secundaria</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <div class="container py-4">
+      <div class="card shadow p-4 rounded-4">
+        <h2 class="text-center mb-4">Formulario de Inscripción – 1° Año</h2>
+
+        <form action="generar_pdf.php" method="POST">
+          <!-- ============ DATOS DEL ESTABLECIMIENTO ============ -->
+          <h4 class="mt-2">Datos del Establecimiento</h4>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Nombre</label>
+              <input class="form-control" name="escuela_nombre" />
+            </div>
+            <div class="col-md-2">
+              <label class="form-label">N°</label>
+              <input class="form-control" name="escuela_numero" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Regional de Educación</label>
+              <input class="form-control" name="escuela_regional" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Sector de Gestión</label>
+              <select class="form-select" name="escuela_sector">
+                <option value="Estatal">Estatal</option>
+                <option value="Privado">Privado</option>
+                <option value="Municipal">Municipal</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Ciclo lectivo</label>
+              <input class="form-control" name="escuela_ciclo" />
+            </div>
+          </div>
+
+          <!-- ============ ESCUELA PRIMARIA DE PROCEDENCIA ============ -->
+          <h4 class="mt-4">Escuela Primaria de la que procede</h4>
+          <div class="row g-3">
+            <div class="col-md-8">
+              <label class="form-label">Nombre</label>
+              <input class="form-control" name="primaria_nombre" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">N°</label>
+              <input class="form-control" name="primaria_numero" />
+            </div>
+            <div class="col-12">
+              <label class="form-label">Dirección</label>
+              <input class="form-control" name="primaria_direccion" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Localidad</label>
+              <input class="form-control" name="primaria_localidad" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Provincia</label>
+              <input class="form-control" name="primaria_provincia" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">País</label>
+              <input class="form-control" name="primaria_pais" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Sector de Gestión</label>
+              <select class="form-select" name="primaria_sector">
+                <option value="Estatal">Estatal</option>
+                <option value="Privado">Privado</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- ============ DATOS DEL ALUMNO ============ -->
+          <h4 class="mt-4">Datos del Alumno</h4>
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="form-label">Apellido y Nombre</label>
+              <input class="form-control" name="alumno_nombre" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">DNI</label>
+              <input class="form-control" name="alumno_dni" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Localidad y Prov. de nacimiento</label>
+              <input class="form-control" name="alumno_lugar_nac" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Fecha de nacimiento</label>
+              <input type="date" class="form-control" name="alumno_fnac" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">País de nacimiento</label>
+              <input class="form-control" name="alumno_pais_nac" />
+            </div>
+            <div class="col-md-8">
+              <label class="form-label">Nacionalidad</label>
+              <div class="d-flex flex-wrap gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="alumno_nacionalidad"
+                    value="Argentino nativo"
+                  />
+                  <label class="form-check-label">Argentino nativo</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="alumno_nacionalidad"
+                    value="Argentino naturalizado"
+                  />
+                  <label class="form-check-label">Argentino naturalizado</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="alumno_nacionalidad"
+                    value="Argentino por opción"
+                  />
+                  <label class="form-check-label">Argentino por opción</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="alumno_nacionalidad"
+                    value="Extranjero"
+                  />
+                  <label class="form-check-label">Extranjero</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Domicilio</label>
+              <input class="form-control" name="alumno_domicilio" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Localidad</label>
+              <input class="form-control" name="alumno_localidad" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Teléfono</label>
+              <input class="form-control" name="alumno_tel" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Mail</label>
+              <input type="email" class="form-control" name="alumno_mail" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label d-block">Pueblo Originario</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="alumno_pueblo_originario"
+                    value="SI"
+                  />
+                  <label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="alumno_pueblo_originario"
+                    value="NO"
+                  />
+                  <label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <label class="form-label">Etnia</label>
+              <input class="form-control" name="alumno_etnia" />
+            </div>
+          </div>
+
+          <!-- ============ AUH y DISCAPACIDAD/INTEGRACIÓN ============ -->
+          <h4 class="mt-4">
+            Asignación Universal por Hijo • Discapacidad / Integración
+          </h4>
+          <div class="row g-3">
+            <div class="col-md-3">
+              <label class="form-label d-block">¿Posee AUH?</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="auh_posee"
+                    value="SI"
+                  />
+                  <label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="auh_posee"
+                    value="NO"
+                  />
+                  <label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label d-block">¿Posee discapacidad?</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="discapacidad_posee"
+                    value="SI"
+                  />
+                  <label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="discapacidad_posee"
+                    value="NO"
+                  />
+                  <label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">¿Cuál?</label>
+              <input class="form-control" name="discapacidad_cual" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label d-block"
+                >¿Está integrado Escuela Especial?</label
+              >
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="integrado_ee"
+                    value="SI"
+                  />
+                  <label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="integrado_ee"
+                    value="NO"
+                  />
+                  <label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <label class="form-label">¿Cuál?</label>
+              <input class="form-control" name="integrado_ee_cual" />
+            </div>
+          </div>
+
+          <!-- ============ GRUPO FAMILIAR + HERMANOS CURSANDO ============ -->
+          <h4 class="mt-4">Grupo Familiar</h4>
+          <div class="row g-3">
+            <div class="col-md-8">
+              <label class="form-label"
+                >Detalle del grupo familiar que convive con el alumno</label
+              >
+              <textarea
+                class="form-control"
+                name="grupo_familiar_detalle"
+                rows="3"
+              ></textarea>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label"
+                >Hermanos cursando en esta escuela</label
+              >
+              <div class="border rounded p-2">
+                <div class="mb-2">
+                  <input
+                    class="form-control mb-1"
+                    placeholder="Nombre"
+                    name="hermano1_nombre"
+                  />
+                  <input
+                    class="form-control"
+                    placeholder="Curso"
+                    name="hermano1_curso"
+                  />
+                </div>
+                <div class="mb-2">
+                  <input
+                    class="form-control mb-1"
+                    placeholder="Nombre"
+                    name="hermano2_nombre"
+                  />
+                  <input
+                    class="form-control"
+                    placeholder="Curso"
+                    name="hermano2_curso"
+                  />
+                </div>
+                <div>
+                  <input
+                    class="form-control mb-1"
+                    placeholder="Nombre"
+                    name="hermano3_nombre"
+                  />
+                  <input
+                    class="form-control"
+                    placeholder="Curso"
+                    name="hermano3_curso"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ OTROS DATOS (restricción judicial) ============ -->
+          <h4 class="mt-4">Otros Datos</h4>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label d-block"
+                >¿Posee restricción judicial de acercamiento a alguna
+                persona?</label
+              >
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="restriccion_posee"
+                    value="SI"
+                  />
+                  <label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="restriccion_posee"
+                    value="NO"
+                  />
+                  <label class="form-check-label">NO</label>
+                </div>
+              </div>
+              <div class="mt-2">
+                <label class="form-label d-block"
+                  >¿Adjunta documentación?</label
+                >
+                <div class="d-flex gap-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="restriccion_doc"
+                      value="SI"
+                    />
+                    <label class="form-check-label">SI</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="restriccion_doc"
+                      value="NO"
+                    />
+                    <label class="form-check-label">NO</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Persona</label>
+              <div class="row g-2">
+                <div class="col-md-6">
+                  <input
+                    class="form-control"
+                    placeholder="Apellido"
+                    name="restriccion_apellido"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    class="form-control"
+                    placeholder="Nombre"
+                    name="restriccion_nombre"
+                  />
+                </div>
+                <div class="col-12">
+                  <input
+                    class="form-control"
+                    placeholder="DNI"
+                    name="restriccion_dni"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ PERSONAS AUTORIZADAS A RETIRAR ============ -->
+          <h4 class="mt-4">Personas autorizadas a retirar al alumno</h4>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label">Apellido</label>
+              <input class="form-control" name="aut1_apellido" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Nombre</label>
+              <input class="form-control" name="aut1_nombre" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">DNI</label>
+              <input class="form-control" name="aut1_dni" />
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">Apellido</label>
+              <input class="form-control" name="aut2_apellido" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Nombre</label>
+              <input class="form-control" name="aut2_nombre" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">DNI</label>
+              <input class="form-control" name="aut2_dni" />
+            </div>
+          </div>
+
+          <!-- ============ ACTIVIDADES EXTRAESCOLARES ============ -->
+          <h4 class="mt-4">Actividades Extraescolares del Alumno</h4>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label d-block">Deporte</label>
+              <div class="d-flex gap-3 mb-2">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="deporte_tipo"
+                    value="Federado"
+                  />
+                  <label class="form-check-label">Federado</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="deporte_tipo"
+                    value="No Federado"
+                  />
+                  <label class="form-check-label">No Federado</label>
+                </div>
+              </div>
+              <input
+                class="form-control"
+                name="deporte_cuales"
+                placeholder="¿Cuál/es?"
+              />
+              <div class="mt-3">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="musica_si"
+                    value="SI"
+                  />
+                  <label class="form-check-label">Música</label>
+                </div>
+                <input
+                  class="form-control mt-1"
+                  name="musica_cuales"
+                  placeholder="¿Cuál/es?"
+                />
+              </div>
+              <div class="mt-3">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="teatro_si"
+                    value="SI"
+                  />
+                  <label class="form-check-label">Teatro</label>
+                </div>
+              </div>
+              <div class="mt-3">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="idioma_si"
+                    value="SI"
+                  />
+                  <label class="form-check-label">Idioma</label>
+                </div>
+                <input
+                  class="form-control mt-1"
+                  name="idioma_cuales"
+                  placeholder="¿Cuál/es?"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label"
+                >Otras actividades no contempladas</label
+              >
+              <textarea
+                class="form-control"
+                rows="6"
+                name="otras_actividades"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- ============ DATOS DE LA MADRE ============ -->
+          <h4 class="mt-4">Datos de la Madre</h4>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Apellido/s</label>
+              <input class="form-control" name="madre_apellidos" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Nombre/s</label>
+              <input class="form-control" name="madre_nombres" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Tipo de Doc.</label>
+              <input class="form-control" name="madre_tipo_doc" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">N°</label>
+              <input class="form-control" name="madre_dni" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block">Si no posee documento</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_sin_doc"
+                    value="En trámite"
+                  />
+                  <label class="form-check-label">En trámite</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_sin_doc"
+                    value="No tiene"
+                  />
+                  <label class="form-check-label">No tiene</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label d-block">¿Vive?</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_vive"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_vive"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Fecha de fallecimiento</label>
+              <input type="date" class="form-control" name="madre_f_fallec" />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Localidad y Prov. de nacimiento</label>
+              <input class="form-control" name="madre_lugar_nac" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Fecha Nac.</label>
+              <input type="date" class="form-control" name="madre_fnac" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Nacionalidad</label>
+              <input class="form-control" name="madre_nacionalidad" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Estado civil</label>
+              <input class="form-control" name="madre_estado_civil" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label d-block">Pueblo Originario</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_pueblo"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_pueblo"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Etnia</label>
+              <input class="form-control" name="madre_etnia" />
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label d-block"
+                >¿Asistió a establecimiento educacional?</label
+              >
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_asistio"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_asistio"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block">Nivel más alto cursado</label>
+              <div class="d-flex flex-wrap gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_nivel"
+                    value="Primario"
+                  /><label class="form-check-label">Primario</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_nivel"
+                    value="Secundario"
+                  /><label class="form-check-label">Secundario</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_nivel"
+                    value="Terciario"
+                  /><label class="form-check-label">Terciario</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_nivel"
+                    value="Universitario"
+                  /><label class="form-check-label">Universitario</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label d-block">¿Completó ese nivel?</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_completo"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_completo"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Domicilio</label>
+              <input class="form-control" name="madre_domicilio" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Localidad</label>
+              <input class="form-control" name="madre_localidad" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Teléfono fijo</label>
+              <input class="form-control" name="madre_tel_fijo" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Teléfono celular</label>
+              <input class="form-control" name="madre_tel_cel" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Mail</label>
+              <input type="email" class="form-control" name="madre_mail" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block">¿Es Jefe de Hogar?</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_jefe"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="madre_jefe"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Profesión u ocupación</label>
+              <input class="form-control" name="madre_profesion" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">¿Dónde?</label>
+              <input class="form-control" name="madre_donde" />
+            </div>
+            <div class="col-md-2">
+              <label class="form-label">Teléfono</label>
+              <input class="form-control" name="madre_tel_trabajo" />
+            </div>
+            <div class="col-12">
+              <label class="form-label d-block">Condición de actividad</label>
+              <div class="row">
+                <div class="col-md-6 d-flex flex-column">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="madre_condicion"
+                      value="Sólo trabaja"
+                    /><label class="form-check-label">Sólo trabaja</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="madre_condicion"
+                      value="Trabaja y estudia"
+                    /><label class="form-check-label">Trabaja y estudia</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="madre_condicion"
+                      value="Trabaja y recibe Jubilac./Pensión"
+                    /><label class="form-check-label"
+                      >Trabaja y recibe Jubilac./Pensión</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="madre_condicion"
+                      value="Sólo busca trabajo"
+                    /><label class="form-check-label">Sólo busca trabajo</label>
+                  </div>
+                </div>
+                <div class="col-md-6 d-flex flex-column">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="madre_condicion"
+                      value="Sólo estudia"
+                    /><label class="form-check-label">Sólo estudia</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="madre_condicion"
+                      value="Busca trabajo y estudia"
+                    /><label class="form-check-label"
+                      >Busca trabajo y estudia</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="madre_condicion"
+                      value="Busca trabajo y recibe Jubilac./Pensión"
+                    /><label class="form-check-label"
+                      >Busca trabajo y recibe Jubilac./Pensión</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="madre_condicion"
+                      value="Jubilado/Pensionado"
+                    /><label class="form-check-label"
+                      >Jubilado/Pensionado</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="madre_condicion"
+                      value="Otro"
+                    /><label class="form-check-label">Otro</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ DATOS DEL PADRE ============ -->
+          <h4 class="mt-4">Datos del Padre</h4>
+          <!-- (mismos campos que madre, con prefijo padre_) -->
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Apellido/s</label
+              ><input class="form-control" name="padre_apellidos" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Nombre/s</label
+              ><input class="form-control" name="padre_nombres" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Tipo de Doc.</label
+              ><input class="form-control" name="padre_tipo_doc" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">N°</label
+              ><input class="form-control" name="padre_dni" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block">Si no posee documento</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_sin_doc"
+                    value="En trámite"
+                  /><label class="form-check-label">En trámite</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_sin_doc"
+                    value="No tiene"
+                  /><label class="form-check-label">No tiene</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label d-block">¿Vive?</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_vive"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_vive"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Fecha de fallecimiento</label
+              ><input type="date" class="form-control" name="padre_f_fallec" />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Localidad y Prov. de nacimiento</label
+              ><input class="form-control" name="padre_lugar_nac" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Fecha Nac.</label
+              ><input type="date" class="form-control" name="padre_fnac" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Nacionalidad</label
+              ><input class="form-control" name="padre_nacionalidad" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Estado civil</label
+              ><input class="form-control" name="padre_estado_civil" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label d-block">Pueblo Originario</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_pueblo"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_pueblo"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Etnia</label
+              ><input class="form-control" name="padre_etnia" />
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label d-block"
+                >¿Asistió a establecimiento educacional?</label
+              >
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_asistio"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_asistio"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block">Nivel más alto cursado</label>
+              <div class="d-flex flex-wrap gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_nivel"
+                    value="Primario"
+                  /><label class="form-check-label">Primario</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_nivel"
+                    value="Secundario"
+                  /><label class="form-check-label">Secundario</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_nivel"
+                    value="Terciario"
+                  /><label class="form-check-label">Terciario</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_nivel"
+                    value="Universitario"
+                  /><label class="form-check-label">Universitario</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label d-block">¿Completó ese nivel?</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_completo"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_completo"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Domicilio</label
+              ><input class="form-control" name="padre_domicilio" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Localidad</label
+              ><input class="form-control" name="padre_localidad" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Teléfono fijo</label
+              ><input class="form-control" name="padre_tel_fijo" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Teléfono celular</label
+              ><input class="form-control" name="padre_tel_cel" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Mail</label
+              ><input type="email" class="form-control" name="padre_mail" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block">¿Es Jefe de Hogar?</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_jefe"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="padre_jefe"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Profesión u ocupación</label
+              ><input class="form-control" name="padre_profesion" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">¿Dónde?</label
+              ><input class="form-control" name="padre_donde" />
+            </div>
+            <div class="col-md-2">
+              <label class="form-label">Teléfono</label
+              ><input class="form-control" name="padre_tel_trabajo" />
+            </div>
+            <div class="col-12">
+              <label class="form-label d-block">Condición de actividad</label>
+              <div class="row">
+                <div class="col-md-6 d-flex flex-column">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="padre_condicion"
+                      value="Sólo trabaja"
+                    /><label class="form-check-label">Sólo trabaja</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="padre_condicion"
+                      value="Trabaja y estudia"
+                    /><label class="form-check-label">Trabaja y estudia</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="padre_condicion"
+                      value="Trabaja y recibe Jubilac./Pensión"
+                    /><label class="form-check-label"
+                      >Trabaja y recibe Jubilac./Pensión</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="padre_condicion"
+                      value="Sólo busca trabajo"
+                    /><label class="form-check-label">Sólo busca trabajo</label>
+                  </div>
+                </div>
+                <div class="col-md-6 d-flex flex-column">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="padre_condicion"
+                      value="Sólo estudia"
+                    /><label class="form-check-label">Sólo estudia</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="padre_condicion"
+                      value="Busca trabajo y estudia"
+                    /><label class="form-check-label"
+                      >Busca trabajo y estudia</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="padre_condicion"
+                      value="Busca trabajo y recibe Jubilac./Pensión"
+                    /><label class="form-check-label"
+                      >Busca trabajo y recibe Jubilac./Pensión</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="padre_condicion"
+                      value="Jubilado/Pensionado"
+                    /><label class="form-check-label"
+                      >Jubilado/Pensionado</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="padre_condicion"
+                      value="Otro"
+                    /><label class="form-check-label">Otro</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ DATOS DEL TUTOR ============ -->
+          <h4 class="mt-4">Datos del Tutor</h4>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Apellido/s</label
+              ><input class="form-control" name="tutor_apellidos" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Nombre/s</label
+              ><input class="form-control" name="tutor_nombres" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Tipo de Doc.</label
+              ><input class="form-control" name="tutor_tipo_doc" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">N°</label
+              ><input class="form-control" name="tutor_dni" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block">Si no posee documento</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tutor_sin_doc"
+                    value="En trámite"
+                  /><label class="form-check-label">En trámite</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tutor_sin_doc"
+                    value="No tiene"
+                  /><label class="form-check-label">No tiene</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Localidad y Prov. de nacimiento</label
+              ><input class="form-control" name="tutor_lugar_nac" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Fecha Nac.</label
+              ><input type="date" class="form-control" name="tutor_fnac" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Nacionalidad</label
+              ><input class="form-control" name="tutor_nacionalidad" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Estado civil</label
+              ><input class="form-control" name="tutor_estado_civil" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Parentesco</label
+              ><input class="form-control" name="tutor_parentesco" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label d-block">Pueblo Originario</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tutor_pueblo"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tutor_pueblo"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Etnia</label
+              ><input class="form-control" name="tutor_etnia" />
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label d-block"
+                >¿Asistió a establecimiento educacional?</label
+              >
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tutor_asistio"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tutor_asistio"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block">Nivel más alto cursado</label>
+              <div class="d-flex flex-wrap gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tutor_nivel"
+                    value="Primario"
+                  /><label class="form-check-label">Primario</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tutor_nivel"
+                    value="Secundario"
+                  /><label class="form-check-label">Secundario</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tutor_nivel"
+                    value="Terciario"
+                  /><label class="form-check-label">Terciario</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tutor_nivel"
+                    value="Universitario"
+                  /><label class="form-check-label">Universitario</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label d-block">¿Completó ese nivel?</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tutor_completo"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tutor_completo"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Domicilio</label
+              ><input class="form-control" name="tutor_domicilio" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Localidad</label
+              ><input class="form-control" name="tutor_localidad" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Teléfono fijo</label
+              ><input class="form-control" name="tutor_tel_fijo" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Teléfono celular</label
+              ><input class="form-control" name="tutor_tel_cel" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Mail</label
+              ><input type="email" class="form-control" name="tutor_mail" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block">¿Es Jefe de Hogar?</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tutor_jefe"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tutor_jefe"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Profesión u ocupación</label
+              ><input class="form-control" name="tutor_profesion" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">¿Dónde?</label
+              ><input class="form-control" name="tutor_donde" />
+            </div>
+            <div class="col-md-2">
+              <label class="form-label">Teléfono</label
+              ><input class="form-control" name="tutor_tel_trabajo" />
+            </div>
+            <div class="col-12">
+              <label class="form-label d-block">Condición de actividad</label>
+              <div class="row">
+                <div class="col-md-6 d-flex flex-column">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tutor_condicion"
+                      value="Sólo trabaja"
+                    /><label class="form-check-label">Sólo trabaja</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tutor_condicion"
+                      value="Trabaja y estudia"
+                    /><label class="form-check-label">Trabaja y estudia</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tutor_condicion"
+                      value="Trabaja y recibe Jubilac./Pensión"
+                    /><label class="form-check-label"
+                      >Trabaja y recibe Jubilac./Pensión</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tutor_condicion"
+                      value="Sólo busca trabajo"
+                    /><label class="form-check-label">Sólo busca trabajo</label>
+                  </div>
+                </div>
+                <div class="col-md-6 d-flex flex-column">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tutor_condicion"
+                      value="Sólo estudia"
+                    /><label class="form-check-label">Sólo estudia</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tutor_condicion"
+                      value="Busca trabajo y estudia"
+                    /><label class="form-check-label"
+                      >Busca trabajo y estudia</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tutor_condicion"
+                      value="Busca trabajo y recibe Jubilac./Pensión"
+                    /><label class="form-check-label"
+                      >Busca trabajo y recibe Jubilac./Pensión</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tutor_condicion"
+                      value="Jubilado/Pensionado"
+                    /><label class="form-check-label"
+                      >Jubilado/Pensionado</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tutor_condicion"
+                      value="Otro"
+                    /><label class="form-check-label">Otro</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ OTROS DATOS DE LA INSCRIPCIÓN ============ -->
+          <h4 class="mt-4">Otros datos de la Inscripción</h4>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label d-block">Asistió a Sala de 4</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="sala4"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="sala4"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block"
+                >Con atención hospital./domic. durante el año anterior</label
+              >
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="atencion_aa"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="atencion_aa"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block">Asistió a Sala de 5</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="sala5"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="sala5"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block"
+                >Proviene del ámbito rural</label
+              >
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="ambito_rural"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="ambito_rural"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block"
+                >Posee régimen de internado en el establecimiento</label
+              >
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="internado_en"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="internado_en"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block"
+                >Alumno en contexto de encierro</label
+              >
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="contexto_encierro"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="contexto_encierro"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block"
+                >Posee régimen de internado fuera del establecimiento</label
+              >
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="internado_fuera"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="internado_fuera"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block">Adeuda materias</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="adeuda_materias"
+                    value="SI"
+                  /><label class="form-check-label">SI</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="adeuda_materias"
+                    value="NO"
+                  /><label class="form-check-label">NO</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ REGRESO AL SISTEMA EDUCATIVO ============ -->
+          <h4 class="mt-4">Regreso al Sistema Educativo</h4>
+          <div class="mb-2">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="regreso_no_corresponde"
+                value="NO CORRESPONDE"
+                id="rnc"
+              />
+              <label class="form-check-label" for="rnc">NO CORRESPONDE</label>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label d-block"
+                >Programa “Vuelvo a Estudiar”</label
+              >
+              <div class="d-flex flex-wrap gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="vuelvo_estudiar[]"
+                    value="Propaganda"
+                  /><label class="form-check-label">Propaganda</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="vuelvo_estudiar[]"
+                    value="Comentarios"
+                  /><label class="form-check-label">Comentarios</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="vuelvo_estudiar[]"
+                    value="Acomp. Equipo Socioeducativo"
+                  /><label class="form-check-label"
+                    >Acomp. Equipo Socioeducativo</label
+                  >
+                </div>
+                <div class="form-check d-flex align-items-center gap-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="vuelvo_estudiar[]"
+                    value="Otros"
+                  />
+                  <input
+                    class="form-control form-control-sm"
+                    placeholder="Otros"
+                    name="vuelvo_estudiar_otro"
+                    style="max-width: 220px"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-block">Otros programas</label>
+              <div class="d-flex flex-wrap gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="otros_programas[]"
+                    value="Prog.R.Es.Ar."
+                  /><label class="form-check-label">Prog.R.Es.Ar.</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="otros_programas[]"
+                    value="Fines/Finestec"
+                  /><label class="form-check-label">Fines/Finestec</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="otros_programas[]"
+                    value="Nueva Oportunidad"
+                  /><label class="form-check-label">Nueva Oportunidad</label>
+                </div>
+                <div class="form-check d-flex align-items-center gap-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="otros_programas[]"
+                    value="Otro"
+                  />
+                  <input
+                    class="form-control form-control-sm"
+                    placeholder="Otro"
+                    name="otros_programas_otro"
+                    style="max-width: 220px"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="form-label d-block">Otros</label>
+              <div class="d-flex flex-wrap gap-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="otros_regreso[]"
+                    value="Por cobro AUH"
+                  /><label class="form-check-label">Por cobro AUH</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="otros_regreso[]"
+                    value="Por decisión propia"
+                  /><label class="form-check-label">Por decisión propia</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="otros_regreso[]"
+                    value="Por decisión familiar"
+                  /><label class="form-check-label"
+                    >Por decisión familiar</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="otros_regreso[]"
+                    value="Por acceso a Becas"
+                  /><label class="form-check-label">Por acceso a Becas</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="otros_regreso[]"
+                    value="Por necesidad de cambio de escuela"
+                  /><label class="form-check-label"
+                    >Por necesidad de cambio de escuela</label
+                  >
+                </div>
+                <div class="form-check d-flex align-items-center gap-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="otros_regreso[]"
+                    value="Otro"
+                  />
+                  <input
+                    class="form-control form-control-sm"
+                    placeholder="Otro"
+                    name="otros_regreso_otro"
+                    style="max-width: 220px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-3 mt-2">
+            <div class="col-md-6">
+              <label class="form-label">Procedencia</label>
+              <input class="form-control" name="procedencia" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label"
+                >Motivo (seleccione los que correspondan)</label
+              >
+              <select class="form-select" name="motivo[]" multiple>
+                <option>Bajo rendimiento pedagógico</option>
+                <option>Cambio de domicilio</option>
+                <option>Cambio de nivel</option>
+                <option>Conducta del alumno</option>
+                <option>Disconformidad con el Sist. Educativo</option>
+                <option>Distancia de la escuela</option>
+                <option>Otra causa</option>
+                <option>Problemas con los docentes</option>
+                <option>Trabajo del alumno</option>
+                <option>Trabajo del padre o tutor</option>
+              </select>
+              <small class="text-muted"
+                >Ctrl/Cmd + clic para elegir múltiples.</small
+              >
+            </div>
+          </div>
+
+          <!-- ============ DOCUMENTACIÓN A PRESENTAR ============ -->
+          <h4 class="mt-4">Documentación a presentar para la inscripción</h4>
+          <div class="row g-3">
+            <div class="col-md-6 d-flex flex-column gap-2">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="doc_partida"
+                  value="SI"
+                /><label class="form-check-label"
+                  >Partida de Nacimiento y/o fotocopia Libreta de
+                  Matrimonio</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="doc_dni_alumno"
+                  value="SI"
+                /><label class="form-check-label"
+                  >Fotocopia DNI del alumno</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="doc_foto"
+                  value="SI"
+                /><label class="form-check-label">Fotografía del alumno</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="doc_carnet_salud"
+                  value="SI"
+                /><label class="form-check-label"
+                  >Fotocopia Carnet de Salud Escolar</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="doc_cert_escolaridad"
+                  value="SI"
+                /><label class="form-check-label"
+                  >Certificado ORIGINAL de Escolaridad Primaria</label
+                >
+              </div>
+            </div>
+            <div class="col-md-6 d-flex flex-column gap-2">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="doc_libreta_7mo"
+                  value="SI"
+                /><label class="form-check-label"
+                  >Fotocopia Libreta de Séptimo Grado</label
+                >
+              </div>
+              <div class="form-check d-flex align-items-center gap-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="doc_otros_chk"
+                  value="SI"
+                />
+                <input
+                  class="form-control form-control-sm"
+                  placeholder="Otros (detalle)"
+                  name="doc_otros"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ CONSTANCIA SOLICITUD ============ -->
+          <h4 class="mt-4">Constancia de Solicitud de Inscripción</h4>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Nombre del estudiante</label
+              ><input class="form-control" name="constancia_alumno" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Escuela</label
+              ><input class="form-control" name="constancia_escuela" />
+            </div>
+            <div class="col-md-2">
+              <label class="form-label">Día</label
+              ><input class="form-control" name="constancia_dia" />
+            </div>
+            <div class="col-md-5">
+              <label class="form-label">Mes</label
+              ><input class="form-control" name="constancia_mes" />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Año</label
+              ><input class="form-control" name="constancia_anio" />
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <button type="submit" class="btn btn-primary w-100">
+              Generar PDF
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
