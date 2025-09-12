@@ -26,3 +26,31 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+
+
+// Seleccionamos todas las imágenes dentro de .caja-imagen
+const imagenes = document.querySelectorAll('.caja-imagen img');
+const visor = document.getElementById('visor');
+const imagenAmpliada = document.getElementById('imagenAmpliada');
+const cerrar = document.getElementById('cerrar');
+
+// Mostrar imagen ampliada al hacer click
+imagenes.forEach(img => {
+  img.addEventListener('click', () => {
+    visor.style.display = 'flex';
+    imagenAmpliada.src = img.src;
+  });
+});
+
+// Cerrar con la X
+cerrar.addEventListener('click', () => {
+  visor.style.display = 'none';
+});
+
+// Cerrar clickeando fuera de la imagen
+visor.addEventListener('click', (e) => {
+  if (e.target !== imagenAmpliada) {
+    visor.style.display = 'none';
+  }
+});

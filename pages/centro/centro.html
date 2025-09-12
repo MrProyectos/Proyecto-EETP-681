@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>EGRESADOS | ESCUELA N°681</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../../assets/favicon/site.webmanifest" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <!-- LOGO -->
+      <a href="../../index.html">
+        <img src="assets/logo.png" alt="Logo E.E.T.P. N° 681"
+      /></a>
+      <!-- NAV -->
+      <nav class="menu-nav">
+        <ul>
+          <!-- MENÚ PRINCIPAL -->
+          <li class="nav-1st">
+            <a>Menú Principal</a>
+            <ul>
+              <li><a href="../historia/historia.html">Historia</a></li>
+              <li><a href="../efemerides/efemerides.html">Efemérides</a></li>
+            </ul>
+          </li>
+
+          <!-- FOTOS -->
+          <li class="nav-1st">
+            <a>Fotos</a>
+            <ul>
+              <li><a href="../galeria/galeria.html">Galería</a></li>
+              <li><a href="egresados.html">Egresados</a></li>
+            </ul>
+          </li>
+
+          <!-- ALUMNOS -->
+          <li class="nav-1st">
+            <a>Alumnos</a>
+            <ul>
+              <li><a href="../materias/materias.html">Materias</a></li>
+              <li><a href="../horarios/horarios.html">Horarios</a></li>
+              <li>
+                <a href="../reglamento/reglamento.html"
+                  >Reglamento Institucional</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- PROFESORES -->
+          <li class="nav-1st">
+            <a>Profesores</a>
+            <ul>
+              <li>
+                <a
+                  href="https://www.santafe.gob.ar/gestioneducativa/#/sso/login?s=85627615&t=v32k6cen4yab0vvpbgn6fkz0umtzlljyfh07iuh4jr4qma"
+                  target="_blank"
+                  >Mi Legajo</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://eetp681v2.plataformainformes.com.ar/login.php"
+                  target="_blank"
+                  >Plataforma Educativa</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- CONTACTO -->
+          <li class="nav-1st">
+            <a>Contacto</a>
+            <ul>
+              <li>
+                <a href="#" onclick="abrirModalInscripcion()">Inscripciones</a>
+              </li>
+              <li><a href="../centro/centro.html">Centro de Estudiantes</a></li>
+              <li><a href="../contacto/contacto.html">Contactanos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- Botón Hamburguesa -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </header>
+
+    <!-- BODY -->
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <img src="slide1.png" alt="Imagen 1" />
+        </div>
+        <div class="slide">
+          <img src="slide2.png" alt="Imagen 2" />
+        </div>
+        <div class="slide">
+          <img src="slide3.png" alt="Imagen 3" />
+        </div>
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+    <section class="about-us" id="about-us">
+      <h2>Sobre Nosotros</h2>
+      <p>
+        El Centro de Estudiantes es un órgano presente en la escuela u otros
+        establecimientos educativos, que representa a los estudiantes. Se trata
+        de una organización conformada por alumnos y alumnas que buscan defender
+        nuestros derechos y promover una educación más integral.
+      </p>
+    </section>
+    <div class="divider-container">
+      <div class="divider"></div>
+    </div>
+
+    <section class="novedades" id="novedades">
+      <h2>Novedades</h2>
+      <p>
+        Entérate de las últimas noticias y eventos que estamos organizando para
+        nuestra comunidad.
+      </p>
+      <section id="destacados">
+        <div class="destacados-a">
+          <img src="destacado_1.png" alt="" />
+          <a
+            href="https://www.instagram.com/p/C79_Wf_vrxo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"
+            class="boton-saber-mas"
+            >Saber Más</a
+          >
+        </div>
+        <div class="destacados-a">
+          <img src="destacado_2.png" alt="" />
+          <a
+            href="https://www.instagram.com/p/C9M0ktjOmXO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"
+            class="boton-saber-mas"
+            >Saber Más</a
+          >
+        </div>
+        <div class="destacados-a">
+          <img src="destacado_3.png" alt="" />
+          <a
+            href="https://www.instagram.com/p/C58XfrIrhXd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"
+            class="boton-saber-mas"
+            >Saber Más</a
+          >
+        </div>
+      </section>
+    </section>
+    <div class="divider-container">
+      <div class="divider"></div>
+    </div>
+
+    <section class="autoridades" id="autoridad">
+      <h2>Autoridades</h2>
+      <div class="autoridades-list">
+        <div class="autoridad">
+          <h3>Presidente</h3>
+          <p>Gamboni Maximiliano Emanuel</p>
+        </div>
+        <div class="autoridad">
+          <h3>Vicepresidente</h3>
+          <p>Palmero Roy</p>
+        </div>
+        <div class="autoridad">
+          <h3>Secretario</h3>
+          <p>Li.</p>
+        </div>
+      </div>
+    </section>
+    <div class="divider-container">
+      <div class="divider"></div>
+    </div>
+    <section class="about-us" id="blog">
+      <h2>Nuestro Presidente</h2>
+      <p>
+        ¡Hola a todos! Soy Maximiliano Emanuel Gamboni, presidente del Centro de
+        Estudiantes de la EETP 681 y actual abanderado de nuestra escuela. Mi
+        compromiso siempre ha sido representar a mis compañeros con
+        responsabilidad, escuchando sus inquietudes y trabajando para mejorar
+        nuestra comunidad educativa. A lo largo de este año, hemos logrado
+        grandes avances gracias a la participación de cada uno de ustedes, y mi
+        objetivo es seguir impulsando la voz de los estudiantes, promoviendo la
+        unidad y creando más oportunidades de participación. Estoy siempre
+        dispuesto a escuchar y acompañar a cada uno de ustedes para construir
+        juntos un futuro mejor.
+      </p>
+    </section>
+    <div class="divider-container">
+      <div class="divider"></div>
+    </div>
+    <section class="contacto" id="contacto">
+      <h2>Contacto</h2>
+      <div class="info-contacto">
+        <p>Dirección: San José 2002, Humboldt, Santa Fe</p>
+        <p>
+          Instagram del Centro:
+          <a href="https://www.instagram.com/centroeetp681" target="_blank"
+            >@centroeetp681</a
+          >
+        </p>
+        <p>
+          Instagram de la Escuela:
+          <a href="https://www.instagram.com/eetp681" target="_blank"
+            >@eetp681</a
+          >
+        </p>
+      </div>
+    </section>
+    <a href="#" id="scrollToTop" class="scroll-to-top">
+      <i class="bx bxs-up-arrow"></i>
+    </a>
+
+    <!-- FOOTER -->
+    <footer>
+      <section class="disfooter">
+        <div class="logoescuelafooter">
+          <img src="../../assets/img/logo-escuela.png" />
+        </div>
+        <div class="texto-footer">
+          <b>EETP N°681 "MERCEDES ÁLVAREZ DE SEGURA"</b>
+          <div class="lineatextofooter"></div>
+          <div class="socials">
+            <a href="https://maps.app.goo.gl/cJATkSFWNjpMFNmA9" target="_blank"
+              ><img
+                src="../../assets/img/ubicacion-icon.png"
+                alt="LOGO UBICACION"
+            /></a>
+            <a href=""
+              ><img
+                src="../../assets/img/telefono-icon.png"
+                title="3496 480165"
+                alt="LOGO TELEFONO"
+            /></a>
+            <a href="https://wa.me/5493496513482" target="_blank"
+              ><img
+                src="../../assets/img/whatsapp-icon.png"
+                alt="LOGO WHATSAPP"
+            /></a>
+            <a href="mailto:tecnicamercedes@gmail.com" target="_blank"
+              ><img src="../../assets/img/gmail-icon.png" alt="LOGO GMAIL"
+            /></a>
+            <a href="https://www.instagram.com/eetp681/" target="_blank"
+              ><img
+                src="../../assets/img/instagram-icon.png"
+                alt="LOGO INSTAGRAM"
+            /></a>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <div class="lineafondofooter">
+      <p>
+        © 2025 eetp681.edu.ar | Todos los derechos reservados |
+        <a
+          href="https://www.privacypolicies.com/live/ca073588-3d5d-4256-abb4-9c3293286349"
+          target="_blank"
+          >Políticas de Privacidad</a
+        >
+      </p>
+    </div>
+
+    <!-- Ventana emergente (Modal) -->
+    <div id="modalInscripcion" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Inscripción</h2>
+        <p>
+          Descargá el formulario de inscripción en PDF desde el siguiente botón:
+        </p>
+
+        <!-- Botón de descarga -->
+        <a
+          href="../../assets/pdf/inscripcion.pdf"
+          download
+          class="btn-descargar"
+          >📄 Descargar PDF</a
+        >
+        <hr style="margin: 20px 0" />
+
+        <!-- Botón de redirección -->
+        <a href="../inscripciones/inscripciones.html" class="btn-redirigir"
+          >➡️ Completar inscripción online</a
+        >
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../../script.js"></script>
+    <link rel="stylesheet" href="../../header.css" />
+    <link rel="stylesheet" href="../../footer.css" />
+  </body>
+</html>
