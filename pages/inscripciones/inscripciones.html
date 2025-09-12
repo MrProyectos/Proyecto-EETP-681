@@ -2,34 +2,30 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Inscripción - EETP 681</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <title>Formulario de Inscripción</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>Escuela de Educación Técnica Profesional Nº 681</h1>
-      <h2>Formulario de Inscripción - 1er Año</h2>
+      <h1>Escuela de Educación Técnica</h1>
+      <h2>Formulario de Inscripción</h2>
     </header>
 
     <main>
       <form id="inscripcionForm">
-        <!-- DATOS DEL ALUMNO -->
+        <!-- ================= DATOS DEL ALUMNO ================= -->
         <fieldset>
           <legend>Datos del Alumno</legend>
           <div class="form-row">
             <label
-              >Apellido y Nombre:<input
-                type="text"
-                name="alumno_nombre"
-                required
+              >Apellido y Nombre:<input type="text" name="alumno_nombre"
             /></label>
-            <label>DNI:<input type="text" name="alumno_dni" required /></label>
+            <label>DNI:<input type="text" name="alumno_dni" /></label>
             <label
               >Fecha de Nacimiento:<input type="date" name="alumno_fnac"
             /></label>
             <label
-              >País de Nacimiento:<input type="text" name="alumno_pais_nac"
+              >País de Nacimiento:<input type="text" name="alumno_pais"
             /></label>
             <label
               >Nacionalidad:<input type="text" name="alumno_nacionalidad"
@@ -38,292 +34,444 @@
               >Domicilio:<input type="text" name="alumno_domicilio"
             /></label>
             <label>Teléfono:<input type="tel" name="alumno_tel" /></label>
-            <label>Email:<input type="email" name="alumno_mail" /></label>
-            <label
-              >Pueblo originario / Etnia:<input type="text" name="alumno_etnia"
-            /></label>
+            <label>Mail:<input type="email" name="alumno_mail" /></label>
+          </div>
+          <div class="form-row">
+            <label>Pueblo Originario:</label>
+            <div class="opciones-inline">
+              <label
+                ><input type="radio" name="alumno_pueblo" value="Sí" />
+                Sí</label
+              >
+              <label
+                ><input type="radio" name="alumno_pueblo" value="No" />
+                No</label
+              >
+            </div>
+            <label>Etnia:<input type="text" name="alumno_etnia" /></label>
           </div>
         </fieldset>
 
-        <!-- ASIGNACIÓN Y DISCAPACIDAD -->
+        <!-- ================= SITUACIÓN SOCIAL ================= -->
         <fieldset>
           <legend>Situación Social</legend>
-          <div class="form-row">
+          <label>Asignación Universal:</label>
+          <div class="opciones-inline">
             <label
-              >Asignación Universal:
-              <select name="asignacion">
-                <option>No</option>
-                <option>Sí</option>
-              </select>
-            </label>
+              ><input type="radio" name="asignacion" value="Sí" /> Sí</label
+            >
             <label
-              >Discapacidad:
-              <select name="discapacidad">
-                <option>No</option>
-                <option>Sí</option>
-              </select>
-            </label>
-            <label
-              >Detalle discapacidad:<input
-                type="text"
-                name="discapacidad_detalle"
-            /></label>
-            <label
-              >Escuela especial:
-              <select name="escuela_especial">
-                <option>No</option>
-                <option>Sí</option>
-              </select>
-            </label>
-            <label
-              >Cuál:<input type="text" name="escuela_especial_detalle"
-            /></label>
+              ><input type="radio" name="asignacion" value="No" /> No</label
+            >
           </div>
+
+          <label>Discapacidad:</label>
+          <div class="opciones-inline">
+            <label
+              ><input type="radio" name="discapacidad" value="Sí" /> Sí</label
+            >
+            <label
+              ><input type="radio" name="discapacidad" value="No" /> No</label
+            >
+          </div>
+          <label
+            >Detalle:<input type="text" name="discapacidad_detalle"
+          /></label>
+
+          <label>Escuela especial:</label>
+          <div class="opciones-inline">
+            <label
+              ><input type="radio" name="escuela_especial" value="Sí" />
+              Sí</label
+            >
+            <label
+              ><input type="radio" name="escuela_especial" value="No" />
+              No</label
+            >
+          </div>
+          <label
+            >Cuál:<input type="text" name="escuela_especial_detalle"
+          /></label>
         </fieldset>
 
-        <!-- GRUPO FAMILIAR -->
+        <!-- ================= GRUPO FAMILIAR ================= -->
         <fieldset>
           <legend>Grupo Familiar</legend>
+          <label>Composición:<textarea name="grupo_familiar"></textarea></label>
           <div class="form-row">
             <label
-              >Composición del grupo:<textarea name="grupo_familiar"></textarea>
-            </label>
-            <label
-              >Hermano 1:<input type="text" name="hermano1_nombre" />
-              Curso:<input type="text" name="hermano1_curso"
+              >Hermano 1:<input type="text" name="hermano1_nombre"
             /></label>
+            <label>Curso:<input type="text" name="hermano1_curso" /></label>
             <label
-              >Hermano 2:<input type="text" name="hermano2_nombre" />
-              Curso:<input type="text" name="hermano2_curso"
+              >Hermano 2:<input type="text" name="hermano2_nombre"
             /></label>
+            <label>Curso:<input type="text" name="hermano2_curso" /></label>
           </div>
         </fieldset>
 
-        <!-- RESTRICCIONES -->
+        <!-- ================= OTROS DATOS ================= -->
         <fieldset>
           <legend>Otros Datos</legend>
-          <div class="form-row">
+          <label>Restricción Judicial:</label>
+          <div class="opciones-inline">
             <label
-              >Restricción Judicial:
-              <select name="restriccion">
-                <option>No</option>
-                <option>Sí</option>
-              </select>
-            </label>
+              ><input type="radio" name="restriccion" value="Sí" /> Sí</label
+            >
             <label
-              >Detalle:<input type="text" name="restriccion_detalle"
-            /></label>
+              ><input type="radio" name="restriccion" value="No" /> No</label
+            >
+          </div>
+          <label
+            >Detalle:<input type="text" name="restriccion_detalle"
+          /></label>
+
+          <label>Adjunta documentación:</label>
+          <div class="opciones-inline">
             <label
-              >Adjunta documentación:
-              <select name="adjunta_doc">
-                <option>No</option>
-                <option>Sí</option>
-              </select>
-            </label>
+              ><input type="radio" name="adjunta_doc" value="Sí" /> Sí</label
+            >
+            <label
+              ><input type="radio" name="adjunta_doc" value="No" /> No</label
+            >
           </div>
         </fieldset>
 
-        <!-- AUTORIZADOS -->
+        <!-- ================= PERSONAS AUTORIZADAS ================= -->
         <fieldset>
-          <legend>Personas Autorizadas a Retirar</legend>
+          <legend>Personas Autorizadas</legend>
           <div class="form-row">
             <label
-              >Apellido y Nombre:<input type="text" name="autorizado1_nombre" />
-              DNI:<input type="text" name="autorizado1_dni"
+              >Apellido:<input type="text" name="autorizado1_apellido"
             /></label>
             <label
-              >Apellido y Nombre:<input type="text" name="autorizado2_nombre" />
-              DNI:<input type="text" name="autorizado2_dni"
+              >Nombre:<input type="text" name="autorizado1_nombre"
             /></label>
+            <label>DNI:<input type="text" name="autorizado1_dni" /></label>
+          </div>
+          <div class="form-row">
+            <label
+              >Apellido:<input type="text" name="autorizado2_apellido"
+            /></label>
+            <label
+              >Nombre:<input type="text" name="autorizado2_nombre"
+            /></label>
+            <label>DNI:<input type="text" name="autorizado2_dni" /></label>
           </div>
         </fieldset>
 
-        <!-- ACTIVIDADES -->
+        <!-- ================= ACTIVIDADES EXTRAESCOLARES ================= -->
         <fieldset>
           <legend>Actividades Extraescolares</legend>
-          <div class="form-row">
+          <label>Deporte:</label>
+          <div class="opciones-inline">
             <label
-              >Deporte:
-              <select name="deporte">
-                <option>No</option>
-                <option>Sí</option>
-              </select>
-              Cuál:<input type="text" name="deporte_cual" />
-            </label>
+              ><input type="radio" name="deporte" value="Federado" />
+              Federado</label
+            >
             <label
-              >Música:
-              <select name="musica">
-                <option>No</option>
-                <option>Sí</option>
-              </select>
-              Cuál:<input type="text" name="musica_cual" />
-            </label>
-            <label
-              >Teatro:
-              <select name="teatro">
-                <option>No</option>
-                <option>Sí</option>
-              </select>
-            </label>
-            <label
-              >Idiomas:
-              <select name="idioma">
-                <option>No</option>
-                <option>Sí</option>
-              </select>
-              Cuál:<input type="text" name="idioma_cual" />
-            </label>
-            <label
-              >Otras actividades:<textarea name="otras_actividades"></textarea>
-            </label>
+              ><input type="radio" name="deporte" value="No Federado" /> No
+              Federado</label
+            >
           </div>
+          <label>Cuál:<input type="text" name="deporte_cual" /></label>
+
+          <label>Música:</label>
+          <div class="opciones-inline">
+            <label><input type="radio" name="musica" value="Sí" /> Sí</label>
+            <label><input type="radio" name="musica" value="No" /> No</label>
+          </div>
+          <label>Cuál:<input type="text" name="musica_cual" /></label>
+
+          <label>Teatro:</label>
+          <div class="opciones-inline">
+            <label><input type="radio" name="teatro" value="Sí" /> Sí</label>
+            <label><input type="radio" name="teatro" value="No" /> No</label>
+          </div>
+
+          <label>Idiomas:</label>
+          <div class="opciones-inline">
+            <label><input type="radio" name="idioma" value="Sí" /> Sí</label>
+            <label><input type="radio" name="idioma" value="No" /> No</label>
+          </div>
+          <label>Cuál:<input type="text" name="idioma_cual" /></label>
+
+          <label
+            >Otras actividades:<textarea name="otras_actividades"></textarea>
+          </label>
         </fieldset>
 
-        <!-- MADRE -->
+        <!-- ================= DATOS DE LA MADRE ================= -->
         <fieldset>
           <legend>Datos de la Madre</legend>
           <div class="form-row">
+            <label>Apellido:<input type="text" name="madre_apellido" /></label>
+            <label>Nombre:<input type="text" name="madre_nombre" /></label>
+            <label>Tipo Doc:<input type="text" name="madre_doc_tipo" /></label>
+            <label>N°:<input type="text" name="madre_dni" /></label>
+          </div>
+          <label>¿Vive?</label>
+          <div class="opciones-inline">
             <label
-              >Apellido y Nombre:<input type="text" name="madre_nombre"
-            /></label>
-            <label>DNI:<input type="text" name="madre_dni" /></label>
-            <label>Teléfono:<input type="tel" name="madre_tel" /></label>
-            <label>Email:<input type="email" name="madre_mail" /></label>
+              ><input type="radio" name="madre_vive" value="Sí" /> Sí</label
+            >
             <label
-              >Ocupación:<input type="text" name="madre_ocupacion"
-            /></label>
+              ><input type="radio" name="madre_vive" value="No" /> No</label
+            >
+          </div>
+          <label
+            >Fecha Fallecimiento:<input type="date" name="madre_fallecimiento"
+          /></label>
+          <label
+            >Localidad y Provincia:<input
+              type="text"
+              name="madre_localidad_nac"
+          /></label>
+          <label>Fecha Nac:<input type="date" name="madre_fnac" /></label>
+          <label
+            >Nacionalidad:<input type="text" name="madre_nacionalidad"
+          /></label>
+          <label>Pueblo Originario:</label>
+          <div class="opciones-inline">
+            <label
+              ><input type="radio" name="madre_pueblo" value="Sí" /> Sí</label
+            >
+            <label
+              ><input type="radio" name="madre_pueblo" value="No" /> No</label
+            >
+          </div>
+          <label>Etnia:<input type="text" name="madre_etnia" /></label>
+          <label
+            >Estado Civil:<input type="text" name="madre_estado_civil"
+          /></label>
+          <label
+            >Nivel Educativo:<input type="text" name="madre_nivel"
+          /></label>
+          <label>Domicilio:<input type="text" name="madre_domicilio" /></label>
+          <label>Teléfono:<input type="text" name="madre_tel" /></label>
+          <label>Mail:<input type="email" name="madre_mail" /></label>
+          <label>Ocupación:<input type="text" name="madre_ocupacion" /></label>
+          <label>¿Jefe de Hogar?</label>
+          <div class="opciones-inline">
+            <label
+              ><input type="radio" name="madre_jefe" value="Sí" /> Sí</label
+            >
+            <label
+              ><input type="radio" name="madre_jefe" value="No" /> No</label
+            >
           </div>
         </fieldset>
 
-        <!-- PADRE -->
+        <!-- ================= DATOS DEL PADRE ================= -->
         <fieldset>
           <legend>Datos del Padre</legend>
           <div class="form-row">
+            <label>Apellido:<input type="text" name="padre_apellido" /></label>
+            <label>Nombre:<input type="text" name="padre_nombre" /></label>
+            <label>Tipo Doc:<input type="text" name="padre_doc_tipo" /></label>
+            <label>N°:<input type="text" name="padre_dni" /></label>
+          </div>
+          <label>¿Vive?</label>
+          <div class="opciones-inline">
             <label
-              >Apellido y Nombre:<input type="text" name="padre_nombre"
-            /></label>
-            <label>DNI:<input type="text" name="padre_dni" /></label>
-            <label>Teléfono:<input type="tel" name="padre_tel" /></label>
-            <label>Email:<input type="email" name="padre_mail" /></label>
+              ><input type="radio" name="padre_vive" value="Sí" /> Sí</label
+            >
             <label
-              >Ocupación:<input type="text" name="padre_ocupacion"
-            /></label>
+              ><input type="radio" name="padre_vive" value="No" /> No</label
+            >
+          </div>
+          <label
+            >Fecha Fallecimiento:<input type="date" name="padre_fallecimiento"
+          /></label>
+          <label
+            >Localidad y Provincia:<input
+              type="text"
+              name="padre_localidad_nac"
+          /></label>
+          <label>Fecha Nac:<input type="date" name="padre_fnac" /></label>
+          <label
+            >Nacionalidad:<input type="text" name="padre_nacionalidad"
+          /></label>
+          <label>Pueblo Originario:</label>
+          <div class="opciones-inline">
+            <label
+              ><input type="radio" name="padre_pueblo" value="Sí" /> Sí</label
+            >
+            <label
+              ><input type="radio" name="padre_pueblo" value="No" /> No</label
+            >
+          </div>
+          <label>Etnia:<input type="text" name="padre_etnia" /></label>
+          <label
+            >Estado Civil:<input type="text" name="padre_estado_civil"
+          /></label>
+          <label
+            >Nivel Educativo:<input type="text" name="padre_nivel"
+          /></label>
+          <label>Domicilio:<input type="text" name="padre_domicilio" /></label>
+          <label>Teléfono:<input type="text" name="padre_tel" /></label>
+          <label>Mail:<input type="email" name="padre_mail" /></label>
+          <label>Ocupación:<input type="text" name="padre_ocupacion" /></label>
+          <label>¿Jefe de Hogar?</label>
+          <div class="opciones-inline">
+            <label
+              ><input type="radio" name="padre_jefe" value="Sí" /> Sí</label
+            >
+            <label
+              ><input type="radio" name="padre_jefe" value="No" /> No</label
+            >
           </div>
         </fieldset>
 
-        <!-- TUTOR -->
+        <!-- ================= DATOS DEL TUTOR ================= -->
         <fieldset>
           <legend>Datos del Tutor</legend>
           <div class="form-row">
+            <label>Apellido:<input type="text" name="tutor_apellido" /></label>
+            <label>Nombre:<input type="text" name="tutor_nombre" /></label>
+            <label>Tipo Doc:<input type="text" name="tutor_doc_tipo" /></label>
+            <label>N°:<input type="text" name="tutor_dni" /></label>
+          </div>
+          <label>¿Vive?</label>
+          <label
+            >Localidad y Provincia:<input
+              type="text"
+              name="tutor_localidad_nac"
+          /></label>
+          <label>Fecha Nac:<input type="date" name="tutor_fnac" /></label>
+          <label
+            >Nacionalidad:<input type="text" name="tutor_nacionalidad"
+          /></label>
+          <label>Pueblo Originario:</label>
+          <div class="opciones-inline">
             <label
-              >Apellido y Nombre:<input type="text" name="tutor_nombre"
-            /></label>
-            <label>DNI:<input type="text" name="tutor_dni" /></label>
-            <label>Teléfono:<input type="tel" name="tutor_tel" /></label>
-            <label>Email:<input type="email" name="tutor_mail" /></label>
+              ><input type="radio" name="tutor_pueblo" value="Sí" /> Sí</label
+            >
             <label
-              >Ocupación:<input type="text" name="tutor_ocupacion"
-            /></label>
+              ><input type="radio" name="tutor_pueblo" value="No" /> No</label
+            >
+          </div>
+          <label>Etnia:<input type="text" name="tutor_etnia" /></label>
+          <label
+            >Estado Civil:<input type="text" name="tutor_estado_civil"
+          /></label>
+          <label
+            >Parentezco:<input type="text" name="tutor_parentezco"
+          /></label>
+          <label
+            >Nivel Educativo:<input type="text" name="tutor_nivel"
+          /></label>
+          <label>Domicilio:<input type="text" name="tutor_domicilio" /></label>
+          <label>Teléfono:<input type="text" name="tutor_tel" /></label>
+          <label>Mail:<input type="email" name="tutor_mail" /></label>
+          <label>Ocupación:<input type="text" name="tutor_ocupacion" /></label>
+          <label>¿Jefe de Hogar?</label>
+          <div class="opciones-inline">
+            <label
+              ><input type="radio" name="tutor_jefe" value="Sí" /> Sí</label
+            >
+            <label
+              ><input type="radio" name="tutor_jefe" value="No" /> No</label
+            >
           </div>
         </fieldset>
 
-        <!-- ACADÉMICOS -->
+        <!-- ================= OTROS DATOS DE LA INSCRIPCIÓN ================= -->
         <fieldset>
-          <legend>Otros Datos Académicos</legend>
-          <div class="form-row">
+          <legend>Otros Datos de la Inscripción</legend>
+          <div class="opciones-inline">
             <label
-              >Asistió sala 4:<select name="sala4">
-                <option>No</option>
-                <option>Sí</option>
-              </select></label
+              ><input type="checkbox" name="sala4" value="Sí" /> Asistió a Sala
+              de cuatro</label
             >
             <label
-              >Asistió sala 5:<select name="sala5">
-                <option>No</option>
-                <option>Sí</option>
-              </select></label
+              ><input type="checkbox" name="sala5" value="Sí" /> Asistió a Sala
+              de cinco</label
             >
             <label
-              >Internado:<select name="internado">
-                <option>No</option>
-                <option>Sí</option>
-              </select></label
+              ><input type="checkbox" name="internado" value="Sí" /> Posee
+              régimen de internado</label
             >
             <label
-              >Hospital/Domicilio:<select name="hospital">
-                <option>No</option>
-                <option>Sí</option>
-              </select></label
+              ><input type="checkbox" name="hospital" value="Sí" /> Con atención
+              hospitalaria/domiciliaria</label
             >
             <label
-              >Ámbito rural:<select name="ambito_rural">
-                <option>No</option>
-                <option>Sí</option>
-              </select></label
+              ><input type="checkbox" name="ambito_rural" value="Sí" /> Proviene
+              del ámbito rural</label
             >
             <label
-              >Contexto de encierro:<select name="encierro">
-                <option>No</option>
-                <option>Sí</option>
-              </select></label
+              ><input type="checkbox" name="encierro" value="Sí" /> Alumno en
+              contexto de encierro</label
             >
             <label
-              >Adeuda materias:<select name="materias">
-                <option>No</option>
-                <option>Sí</option>
-              </select></label
+              ><input type="checkbox" name="materias" value="Sí" /> Adeuda
+              materias</label
             >
-            <label
-              >Regreso al sistema:<select name="regreso_sistema">
-                <option>No</option>
-                <option>Sí</option>
-              </select></label
-            >
-            <label>Detalle:<textarea name="regreso_detalle"></textarea></label>
           </div>
         </fieldset>
 
-        <!-- PROCEDENCIA -->
+        <!-- ================= REGRESO AL SISTEMA EDUCATIVO ================= -->
+        <fieldset>
+          <legend>Regreso al Sistema Educativo</legend>
+          <label>Programa:<input type="text" name="regreso_programa" /></label>
+          <label>Detalle:<textarea name="regreso_detalle"></textarea></label>
+        </fieldset>
+
+        <!-- ================= PROCEDENCIA ================= -->
         <fieldset>
           <legend>Procedencia</legend>
-          <div class="form-row">
-            <label
-              >Escuela de procedencia:<input type="text" name="procedencia"
-            /></label>
-            <label>Motivo:<textarea name="motivo"></textarea></label>
-          </div>
+          <label>Procedencia:<input type="text" name="procedencia" /></label>
+          <label>Motivo:<textarea name="motivo"></textarea></label>
         </fieldset>
 
-        <!-- DOCUMENTACIÓN -->
+        <!-- ================= DOCUMENTACIÓN ================= -->
         <fieldset>
-          <legend>Documentación Entregada</legend>
-          <div class="form-row">
-            <textarea name="documentacion"></textarea>
+          <legend>Documentación a Presentar</legend>
+          <div class="opciones-inline">
+            <label
+              ><input type="checkbox" name="doc_partida" value="Sí" /> Partida
+              de Nacimiento</label
+            >
+            <label
+              ><input type="checkbox" name="doc_dni" value="Sí" /> Fotocopia
+              DNI</label
+            >
+            <label
+              ><input type="checkbox" name="doc_libreta" value="Sí" /> Libreta
+              Matrimonio</label
+            >
+            <label
+              ><input type="checkbox" name="doc_7mo" value="Sí" /> Fotocopia 7°
+              grado</label
+            >
+            <label
+              ><input type="checkbox" name="doc_foto" value="Sí" />
+              Fotografía</label
+            >
+            <label
+              ><input type="checkbox" name="doc_boletin" value="Sí" /> Boletín
+              Escolar</label
+            >
+            <label
+              ><input type="checkbox" name="doc_certificado" value="Sí" />
+              Certificado Escolaridad</label
+            >
           </div>
         </fieldset>
 
-        <!-- CONSTANCIA -->
+        <!-- ================= CONSTANCIA ================= -->
         <fieldset>
           <legend>Constancia</legend>
-          <div class="form-row">
-            <label
-              >Solicitud de constancia:
-              <select name="constancia">
-                <option>No</option>
-                <option>Sí</option>
-              </select>
-            </label>
-          </div>
+          <label>Solicitud:<textarea name="constancia"></textarea></label>
         </fieldset>
 
-        <button type="button" id="btnGenerar">Generar PDF</button>
+        <button type="submit">Generar PDF</button>
       </form>
     </main>
 
     <footer>
-      <p>&copy; 2025 - EETP Nº681</p>
+      <p>© Escuela Técnica - Inscripción</p>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
