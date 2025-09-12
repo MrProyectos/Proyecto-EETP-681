@@ -24,7 +24,7 @@ h2 {
 }
 
 main {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 20px auto;
   padding: 20px;
   background: white;
@@ -42,31 +42,52 @@ form fieldset {
 form legend {
   font-weight: bold;
   color: #003366;
-}
-
-form label {
-  display: block;
   margin-bottom: 10px;
 }
 
-form input {
-  width: 100%;
+/* CONTENEDOR DE INPUTS EN 2 COLUMNAS */
+form .form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+}
+
+form input,
+form select,
+form textarea {
   padding: 8px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 60px;
+  resize: vertical;
 }
 
 button {
   display: block;
   margin: 20px auto;
-  padding: 10px 25px;
+  padding: 12px 30px;
   background: #003366;
   color: white;
   font-size: 1rem;
+  font-weight: bold;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 button:hover {
