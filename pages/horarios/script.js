@@ -27,17 +27,53 @@ window.onclick = function (event) {
   }
 };
 
-const buttons = document.querySelectorAll(".tab-button");
-    const contents = document.querySelectorAll(".tab-content");
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".tab-button");
+  const contents = document.querySelectorAll(".tab-content");
 
-    buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        // desactivar todos
-        buttons.forEach(b => b.classList.remove("active"));
-        contents.forEach(c => c.classList.remove("active"));
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const tabId =
+        btn.dataset.tab ||
+        btn.getAttribute("data-tab") ||
+        btn.id.replace("btn-", "");
 
-        // activar el clickeado
-        btn.classList.add("active");
-        document.getElementById(btn.dataset.tab).classList.add("active");
+      // Quitar estado activo previo
+      buttons.forEach((b) => b.classList.remove("active"));
+      contents.forEach((c) => {
+        c.classList.remove("active");
+        c.style.opacity = "0";
+        c.style.transform = "translateY(10px)";
       });
+
+      // Activar el nuevo botón
+      btn.classList.add("active");
+
+      // Buscar el contenedor correspondiente
+      const target = document.getElementById(tabId);
+      if (target) {
+        target.classList.add("active");
+
+        // Animación suave de entrada
+        setTimeout(() => {
+          target.style.opacity = "1";
+          target.style.transform = "translateY(0)";
+        }, 50);
+      }
+
+      // Hacer scroll hacia arriba en móvil al cambiar de curso
+      if (window.innerWidth < 768) {
+        window.scrollTo({
+          top: document.querySelector(".horarios").offsetTop - 40,
+          behavior: "smooth",
+        });
+      }
     });
+  });
+
+  // Activar por defecto la primera pestaña
+  if (buttons.length > 0) {
+    buttons[0].classList.add("active");
+    if (contents[0]) contents[0].classList.add("active");
+  }
+});
