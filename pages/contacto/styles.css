@@ -5,7 +5,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
   font-family: "Raleway", sans-serif;
+}
+
+body {
+  text-align: center;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
 }
 
 .div {
@@ -14,6 +22,7 @@
 }
 
 /* ====== SECCIÓN CONTACTO ====== */
+
 .contacto {
   background-color: #f9f9f9;
   padding: 60px 20px;
@@ -82,7 +91,7 @@ button[type="submit"]:hover {
 }
 
 /* ====== RESPONSIVE ====== */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .contacto {
     padding: 40px 15px;
   }

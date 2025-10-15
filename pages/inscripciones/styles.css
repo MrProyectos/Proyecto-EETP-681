@@ -1,31 +1,21 @@
 /* =================== BASE =================== */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", Arial, sans-serif;
 }
 
+.div {
+  height: 100px;
+  width: 100%;
+}
+
 body {
   margin: 0;
+  padding: 0;
   background: #f5f5f5;
   color: #202124;
-}
-
-header {
-  background: #003366; /* azul institucional */
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-header h2 {
-  margin: 5px 0 0;
-  font-size: 1rem;
-  font-weight: normal;
 }
 
 /* =================== FORM CONTAINER =================== */
@@ -117,6 +107,11 @@ textarea {
   gap: 6px;
 }
 
+.radio-group label {
+  align-self: flex-start;
+  text-align: center;
+}
+
 /* Personalización de radios/checkbox */
 input[type="radio"],
 input[type="checkbox"] {
@@ -124,6 +119,64 @@ input[type="checkbox"] {
   width: 16px;
   height: 16px;
   cursor: pointer;
+}
+
+/* =================== SECCIONES ESTILO TABLA =================== */
+.seccion-tabla {
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 35px;
+}
+
+.fila {
+  display: flex;
+  border-bottom: 1px solid #bbb;
+}
+
+.fila:last-child {
+  border-bottom: none;
+}
+
+.columna {
+  flex: 1;
+  padding: 15px;
+  border-right: 1px solid #bbb;
+}
+
+.columna:last-child {
+  border-right: none;
+}
+
+.columna strong {
+  color: #003366;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.subfila {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 6px 0;
+}
+
+.subfila span {
+  font-weight: 500;
+}
+
+textarea,
+input[type="text"] {
+  width: 100%;
+}
+
+.seccion-tabla-doble {
+  margin-top: 10px;
+  padding-top: 4px;
+  margin-left: 10px;
 }
 
 /* =================== BOTÓN =================== */
@@ -148,12 +201,4 @@ button:hover {
 
 button:active {
   transform: scale(0.97);
-}
-
-/* =================== FOOTER =================== */
-footer {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 0.85rem;
-  color: #555;
 }
