@@ -20,7 +20,7 @@ body {
 
 /* =================== FORM CONTAINER =================== */
 main {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 30px auto;
   background: #fff;
   padding: 25px 40px;
@@ -48,7 +48,7 @@ legend {
 /* =================== CAMPOS =================== */
 .form-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
   gap: 20px 30px;
   margin-bottom: 15px;
 }
@@ -114,14 +114,17 @@ textarea {
 
 #actividad-container {
   display: flex;
-  flex-wrap: wrap; /* que bajen si no entran */
+  flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   column-gap: 2rem; /* espacio horizontal entre opciones */
   row-gap: 0.5rem; /* espacio vertical si bajan de línea */
+  margin-bottom: 18px;
 }
 
 #actividad-container label {
   display: inline-flex;
+  flex-direction: row;
   align-items: center;
   gap: 0.4rem; /* separación entre el radio y el texto */
   white-space: nowrap; /* evita que el texto se parta */
@@ -203,10 +206,15 @@ input[type="text"] {
 }
 
 /* =================== BOTÓN =================== */
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
 button {
   display: flex;
   justify-content: center;
-
+  width: 200px;
   padding: 12px 25px;
   background: #003366;
   color: #fff;
