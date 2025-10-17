@@ -294,6 +294,7 @@
           </div>
         </div>
         <!-- ================== MADRE ================== -->
+
         <fieldset>
           <legend>Datos de la Madre</legend>
           <div class="form-row">
@@ -359,7 +360,7 @@
             <label>¿Donde?<input type="text" name="madre_lugarocup" /></label>
           </div>
         </fieldset>
-        <label
+        <label style="margin-bottom: 30px"
           >Condición de actividad:
           <div class="radio-group" id="actividad-container">
             <label><input type="radio" name="madre_actividad" value="1" />Solo trabaja</label>
@@ -442,7 +443,7 @@
             <label>¿Dónde?<input type="text" name="padre_lugarocup" /></label>
           </div>
         </fieldset>
-        <label
+        <label style="margin-bottom: 30px"
           >Condición de actividad:
           <div class="radio-group" id="actividad-container">
             <label><input type="radio" name="padre_actividad" value="1" />Solo trabaja</label>
@@ -517,7 +518,7 @@
             <label>¿Dónde?<input type="text" name="tutor_lugarocup" /></label>
           </div>
         </fieldset>
-        <label
+        <label style="margin-bottom: 30px"
           >Condición de actividad:
           <div class="radio-group" id="actividad-container">
             <label><input type="radio" name="tutor_actividad" value="1" />Solo trabaja</label>
@@ -616,27 +617,44 @@
               </div>
 
               <div class="fila">
-                <div class="subfila">
+                <div class="subfila" style="width: 100%">
                   <label>Programa "Vuelvo a Estudiar":</label>
-                  <input style="margin-left: 20px" type="checkbox" name="regreso_propaganda" />
-                  <label>Propaganda</label>
-                  <input type="checkbox" name="regreso_comentarios" />
-                  <label>Comentarios</label>
-                  <input type="checkbox" name="regreso_equipo" />
-                  <label>Acomp. Equipo Socioeducativo</label>
+                  <div class="div-check">
+                    <input type="checkbox" name="regreso_propaganda" />
+                    <label>Propaganda</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="regreso_comentarios" />
+                    <label>Comentarios</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="regreso_equipo" />
+                    <label>Acomp. Equipo Socioeducativo</label>
+                  </div>
                   <input type="text" name="regreso_otro" placeholder="Otro" />
                 </div>
               </div>
 
               <div class="fila">
-                <div class="subfila">
+                <div class="subfila" style="width: 100%">
                   <label>Otros Programas:</label>
-                  <input style="margin-left: 20px" type="checkbox" name="regreso_progresar" />
-                  <label>Prog.R.Es.Ar.</label>
-                  <input type="checkbox" name="regreso_fines" />
-                  <label>Fines/Finestec</label>
-                  <input type="checkbox" name="regreso_oportunidad" />
-                  <label>Nueva Oportunidad</label>
+                  <div class="div-check">
+                    <input type="checkbox" name="regreso_progresar" />
+                    <label>Prog.R.Es.Ar.</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="regreso_fines" />
+                    <label>Fines/Finestec</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="regreso_oportunidad" />
+                    <label>Nueva Oportunidad</label>
+                  </div>
+
                   <input type="text" name="regreso_otro" placeholder="Otro" />
                 </div>
               </div>
@@ -644,17 +662,31 @@
               <div class="fila">
                 <div class="subfila">
                   <label>Otros:</label>
-                  <input style="margin-left: 20px" type="checkbox" name="regreso_progresar" />
-                  <label>Por cobro AUH</label>
-                  <input type="checkbox" name="regreso_cobro" />
-                  <label>Por decisión propia</label>
-                  <input type="checkbox" name="regreso_propia" />
-                  <label>Por decisión familiar</label>
-                  <input type="checkbox" name="regreso_familiar" />
-                  <label>Por acceso a Becas</label>
-                  <input type="checkbox" name="regreso_becas" />
-                  <label>Por necesidad de cambio de escuela</label>
-                  <input type="checkbox" name="regreso_cambio_escuela" />
+                  <div class="div-check">
+                    <input type="checkbox" name="regreso_cobro" />
+                    <label>Por cobro AUH</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="regreso_propia" />
+                    <label>Por decisión propia</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="regreso_familiar" />
+                    <label>Por decisión familiar</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="regreso_becas" />
+                    <label>Por acceso a Becas</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="regreso_cambio_escuela" />
+                    <label>Por necesidad de cambio de escuela</label>
+                  </div>
+
                   <input type="text" name="regreso_otro" placeholder="Otro" />
                 </div>
               </div>
@@ -662,30 +694,57 @@
               <label>Procedencia:</label>
               <div class="fila">
                 <div class="subfila">
-                  <input type="checkbox" name="procedencia_rendimiento" />
-                  <label>Bajo rendimiento pedagógico</label>
-                  <input type="checkbox" name="procedencia_domilicio" />
-                  <label>Cambio de domilicio</label>
-                  <input type="checkbox" name="procedencia_nivel" />
-                  <label>Cambio de nivel</label>
-                  <input type="checkbox" name="procedencia_conducta" />
-                  <label>Conducto del alumno</label>
-                  <input type="checkbox" name="procedencia_ disconformidad" />
-                  <label>Disconformidad con el Sist. Educativo</label>
-                  <input type="checkbox" name="procedencia_distancia" />
-                  <label>Distancia de la escuela</label>
-                  <input type="checkbox" name="procedencia_otracausa" />
-                  <label>Otra causa</label>
-                  <input type="checkbox" name="procedencia_problemas" />
-                  <label>Problemas con los docentes</label>
-                  <input type="checkbox" name="procedencia_trabajoalum" />
-                  <label>Trabajo del alumno</label>
-                  <input type="checkbox" name="procedencia_trabajopadre" />
-                  <label>Trabajo del padre o tutor</label>
+                  <div class="div-check">
+                    <input type="checkbox" name="procedencia_rendimiento" />
+                    <label>Bajo rendimiento pedagógico</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="procedencia_domilicio" />
+                    <label>Cambio de domilicio</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="procedencia_nivel" />
+                    <label>Cambio de nivel</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="procedencia_conducta" />
+                    <label>Conducto del alumno</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="procedencia_ disconformidad" />
+                    <label>Disconformidad con el Sist. Educativo</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="procedencia_distancia" />
+                    <label>Distancia de la escuela</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="procedencia_otracausa" />
+                    <label>Otra causa</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="procedencia_problemas" />
+                    <label>Problemas con los docentes</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="procedencia_trabajoalum" />
+                    <label>Trabajo del alumno</label>
+                  </div>
+
+                  <div class="div-check">
+                    <input type="checkbox" name="procedencia_trabajopadre" />
+                    <label>Trabajo del padre o tutor</label>
+                  </div>
                 </div>
               </div>
-              <!--<label>Programa:<input type="text" name="regreso_programa" /></label>
-            <label>Detalle:<textarea name="regreso_detalle"></textarea></label>-->
             </div>
           </div>
         </div>
