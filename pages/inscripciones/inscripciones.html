@@ -130,10 +130,18 @@
             <label
               >Nacionalidad:
               <div class="radio-group">
-                <label><input type="radio" name="alumno_nacionalidad" value="Sí" /> Argentino Nativo</label>
-                <label><input type="radio" name="alumno_nacionalidad" value="No" /> Argentino Naturalizado</label>
-                <label><input type="radio" name="alumno_nacionalidad" value="No" /> Argentino por opcion</label>
-                <label><input type="radio" name="alumno_nacionalidad" value="No" /> Extranjero</label>
+                <label
+                  ><input type="radio" name="alumno_nacionalidad" value="Argentino Nativo" /> Argentino Nativo</label
+                >
+                <label
+                  ><input type="radio" name="alumno_nacionalidad" value="Argentino Naturalizado" /> Argentino
+                  Naturalizado</label
+                >
+                <label
+                  ><input type="radio" name="alumno_nacionalidad" value="Argentino por opcion" /> Argentino por
+                  opcion</label
+                >
+                <label><input type="radio" name="alumno_nacionalidad" value="Extranjero" /> Extranjero</label>
               </div>
             </label>
             <label>Domicilio:<input type="text" name="alumno_domicilio" /></label>
@@ -200,6 +208,11 @@
               <div class="subfila">
                 <label>Hermano 2:<input type="text" name="hermano2_nombre" /></label>
                 <label>Curso:<input type="text" name="hermano2_curso" /></label>
+              </div>
+
+              <div class="subfila">
+                <label>Hermano 3:<input type="text" name="hermano3_nombre" /></label>
+                <label>Curso:<input type="text" name="hermano3_curso" /></label>
               </div>
             </div>
           </div>
@@ -610,6 +623,7 @@
               </div>
 
               <div class="fila">
+                0
                 <div class="subfila">
                   <input type="checkbox" name="regreso_corresponde" />
                   <label>NO CORRESPONDE</label>
