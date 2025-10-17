@@ -112,6 +112,19 @@ textarea {
   text-align: center;
 }
 
+#radio-group {
+  display: inline-flex;
+  align-items: normal;
+}
+
+#radio-group label {
+  flex-direction: row;
+}
+
+#radio-group label input {
+  display: block;
+}
+
 /* Personalización de radios/checkbox */
 input[type="radio"],
 input[type="checkbox"] {

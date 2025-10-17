@@ -517,7 +517,7 @@
             <label>¿Dónde?<input type="text" name="tutor_lugarocup" /></label>
             <label
               >Condición de actividad:
-              <div class="radio-group">
+              <div class="radio-group" id="radio-group">
                 <label><input type="radio" name="tutor_actividad" value="1" />Solo trabaja</label>
                 <label><input type="radio" name="tutor_actividad" value="2" />Trabaja y estudia</label>
                 <label><input type="radio" name="tutor_actividad" value="3" />Trabaja y recibe Jubilac./Pensión</label>
@@ -535,61 +535,64 @@
         </fieldset>
 
         <!-- ================== OTROS DATOS DE INSCRIPCIÓN ================== -->
-        <fieldset>
-          <legend>Otros Datos de la Inscripción</legend>
-          <div class="form-row">
-            <label
-              >Asistió a Sala de 4:
-              <div class="radio-group">
-                <label><input type="radio" name="sala4" value="Sí" /> Sí</label>
-                <label><input type="radio" name="sala4" value="No" /> No</label>
-              </div>
-            </label>
-            <label
-              >Asistió a Sala de 5:
-              <div class="radio-group">
-                <label><input type="radio" name="sala5" value="Sí" /> Sí</label>
-                <label><input type="radio" name="sala5" value="No" /> No</label>
-              </div>
-            </label>
-            <label
-              >Internado:
-              <div class="radio-group">
-                <label><input type="radio" name="internado" value="Sí" /> Sí</label>
-                <label><input type="radio" name="internado" value="No" /> No</label>
-              </div>
-            </label>
-            <label
-              >Hospital/Domicilio:
-              <div class="radio-group">
-                <label><input type="radio" name="hospital" value="Sí" /> Sí</label>
-                <label><input type="radio" name="hospital" value="No" /> No</label>
-              </div>
-            </label>
-            <label
-              >Ámbito Rural:
-              <div class="radio-group">
-                <label><input type="radio" name="ambito_rural" value="Sí" /> Sí</label>
-                <label><input type="radio" name="ambito_rural" value="No" /> No</label>
-              </div>
-            </label>
-            <label
-              >Contexto de encierro:
-              <div class="radio-group">
-                <label><input type="radio" name="encierro" value="Sí" /> Sí</label>
-                <label><input type="radio" name="encierro" value="No" /> No</label>
-              </div>
-            </label>
-            <label
-              >Adeuda materias:
-              <div class="radio-group">
-                <label><input type="radio" name="materias" value="Sí" /> Sí</label>
-                <label><input type="radio" name="materias" value="No" /> No</label>
-              </div>
-            </label>
-          </div>
-        </fieldset>
+        <div class="seccion-tabla">
+          <div class="seccion-tabla-doble">
+            <legend>Otros Datos de la Inscripción</legend>
+            <div class="fila">
+              <div class="columna">
+                <div class="subfila">
+                  <span>Asistió a Sala de 4:</span>
+                  <label><input type="radio" name="sala4" value="Sí" /> Sí</label>
+                  <label><input type="radio" name="sala4" value="No" /> No</label>
+                </div>
 
+                <div class="subfila">
+                  <span>Asistió a Sala de 5:</span>
+                  <label><input type="radio" name="sala5" value="Sí" /> Sí</label>
+                  <label><input type="radio" name="sala5" value="No" /> No</label>
+                </div>
+
+                <div class="subfila">
+                  <span>Posee Régimen de internado en el establecimiento:</span>
+                  <label><input type="radio" name="internado" value="Sí" /> Sí</label>
+                  <label><input type="radio" name="internado" value="No" /> No</label>
+                </div>
+
+                <div class="subfila">
+                  <span>Posee Régimen de internado fuera del establecimiento:</span>
+                  <label><input type="radio" name="hospital" value="Sí" /> Sí</label>
+                  <label><input type="radio" name="hospital" value="No" /> No</label>
+                </div>
+              </div>
+
+              <div class="columna">
+                <div class="subfila">
+                  <span>Con atención hospi/domic. durante el año anterior:</span>
+                  <label><input type="radio" name="materias" value="Sí" /> Sí</label>
+                  <label><input type="radio" name="materias" value="No" /> No</label>
+                </div>
+
+                <div class="subfila">
+                  <span>Proviene del Ámbito Rural:</span>
+                  <label><input type="radio" name="ambito_rural" value="Sí" /> Sí</label>
+                  <label><input type="radio" name="ambito_rural" value="No" /> No</label>
+                </div>
+
+                <div class="subfila">
+                  <span>Contexto de encierro:</span>
+                  <label><input type="radio" name="encierro" value="Sí" /> Sí</label>
+                  <label><input type="radio" name="encierro" value="No" /> No</label>
+                </div>
+
+                <div class="subfila">
+                  <span>Adeuda materias:</span>
+                  <label><input type="radio" name="materias" value="Sí" /> Sí</label>
+                  <label><input type="radio" name="materias" value="No" /> No</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- ================== REGRESO AL SISTEMA EDUCATIVO ================== -->
         <fieldset>
           <legend>Regreso al Sistema Educativo</legend>
