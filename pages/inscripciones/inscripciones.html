@@ -517,7 +517,7 @@
             <label>¿Dónde?<input type="text" name="tutor_lugarocup" /></label>
             <label
               >Condición de actividad:
-              <div class="radio-group" id="radio-group">
+              <div class="radio-group" id="actividad-container">
                 <label><input type="radio" name="tutor_actividad" value="1" />Solo trabaja</label>
                 <label><input type="radio" name="tutor_actividad" value="2" />Trabaja y estudia</label>
                 <label><input type="radio" name="tutor_actividad" value="3" />Trabaja y recibe Jubilac./Pensión</label>
@@ -579,7 +579,7 @@
                 </div>
 
                 <div class="subfila">
-                  <span>Contexto de encierro:</span>
+                  <span>Alumno en contexto de encierro:</span>
                   <label><input type="radio" name="encierro" value="Sí" /> Sí</label>
                   <label><input type="radio" name="encierro" value="No" /> No</label>
                 </div>
@@ -594,14 +594,18 @@
           </div>
         </div>
         <!-- ================== REGRESO AL SISTEMA EDUCATIVO ================== -->
-        <fieldset>
+        <div class="seccion-tabla">
           <legend>Regreso al Sistema Educativo</legend>
-          <div class="form-row">
-            <label>Programa:<input type="text" name="regreso_programa" /></label>
-            <label>Detalle:<textarea name="regreso_detalle"></textarea></label>
+          <div class="fila">
+            <div class="columna">
+              <div class="subfila">
+                <label>Información a registrar en los casos del regreso de estudiantes con vulnerabilidad socioeconómica </label>
+              </div>
+              <label>Programa:<input type="text" name="regreso_programa" /></label>
+              <label>Detalle:<textarea name="regreso_detalle"></textarea></label>
+            </div>
           </div>
-        </fieldset>
-
+          
         <!-- ================== PROCEDENCIA ================== -->
         <fieldset>
           <legend>Procedencia</legend>
