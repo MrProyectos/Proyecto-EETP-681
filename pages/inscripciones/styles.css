@@ -7,7 +7,7 @@
 }
 
 .div {
-  height: 100px;
+  height: 120px;
   width: 100%;
 }
 
@@ -141,7 +141,6 @@ textarea {
 /* Personalización de radios/checkbox */
 input[type="radio"],
 input[type="checkbox"] {
-  accent-color: #003366; /* azul institucional */
   width: 16px;
   height: 16px;
   cursor: pointer;
@@ -158,6 +157,7 @@ input[type="checkbox"] {
 .fila {
   display: flex;
   border-bottom: 1px solid #bbb;
+  margin-bottom: 15px;
 }
 
 .fila:last-child {
@@ -232,4 +232,24 @@ button:hover {
 
 button:active {
   transform: scale(0.97);
+}
+
+/* =================== RESPONSIVE =================== */
+
+@media (max-width: 768px) {
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  .radio-group,
+  .opciones-inline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
