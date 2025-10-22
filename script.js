@@ -26,3 +26,21 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+// Botón volver arriba con animación
+const btnVolverArriba = document.getElementById("btnVolverArriba");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    btnVolverArriba.classList.add("mostrar");
+  } else {
+    btnVolverArriba.classList.remove("mostrar");
+  }
+});
+
+btnVolverArriba.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});

@@ -33,10 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const tabId =
-        btn.dataset.tab ||
-        btn.getAttribute("data-tab") ||
-        btn.id.replace("btn-", "");
+      const tabId = btn.dataset.tab || btn.getAttribute("data-tab") || btn.id.replace("btn-", "");
 
       // Quitar estado activo previo
       buttons.forEach((b) => b.classList.remove("active"));
@@ -76,4 +73,22 @@ document.addEventListener("DOMContentLoaded", () => {
     buttons[0].classList.add("active");
     if (contents[0]) contents[0].classList.add("active");
   }
+});
+
+// Botón volver arriba con animación
+const btnVolverArriba = document.getElementById("btnVolverArriba");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    btnVolverArriba.classList.add("mostrar");
+  } else {
+    btnVolverArriba.classList.remove("mostrar");
+  }
+});
+
+btnVolverArriba.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });

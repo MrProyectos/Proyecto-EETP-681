@@ -147,3 +147,41 @@ header nav {
     font-size: 14px;
   }
 }
+
+/* Botón flotante para volver al inicio */
+#btnVolverArriba {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 100;
+  background-color: #309bf8;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+#btnVolverArriba.mostrar {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#btnVolverArriba:hover {
+  background-color: #0367c2;
+  transform: scale(1.1);
+}
+
+#btnVolverArriba svg,
+#btnVolverArriba i {
+  pointer-events: none;
+  color: white;
+  font-size: 22px;
+}
