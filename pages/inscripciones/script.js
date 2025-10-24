@@ -123,7 +123,7 @@ document.getElementById("inscripcionForm").addEventListener("submit", async (e) 
   page1.drawText(formData.get("idioma_cual") || "", { x: 251, y: 95, size: fontSize, font: helvetica });
   page1.drawText(formData.get("otras_actividades") || "", { x: 417, y: 153, size: fontSize, font: helvetica });
 
-  // ================== PÁGINA 2: MADRE / PADRE ==================
+  // ================== PÁGINA 2: MADRE  ================== //
   const page2 = pdfDoc.getPages()[1];
 
   // Ejemplo: MADRE
@@ -139,10 +139,64 @@ document.getElementById("inscripcionForm").addEventListener("submit", async (e) 
   page2.drawText(formData.get("madre_nacimiento") || "", { x: 652, y: 884, size: fontSize, font: helvetica });
   page2.drawText(formData.get("madre_nacionalidad") || "", { x: 134, y: 867, size: fontSize, font: helvetica });
   page2.drawText(formData.get("madre_estado_civil") || "", { x: 452, y: 867, size: fontSize, font: helvetica });
+
   if (formData.get("madre_pueblo") === "Sí") page2.drawText("X", { x: 174, y: 851, size: fontSize, font: helvetica });
   else if (formData.get("madre_pueblo") === "No")
     page2.drawText("X", { x: 213, y: 851, size: fontSize, font: helvetica });
   page2.drawText(formData.get("madre_etnia") || "", { x: 254, y: 851, size: fontSize, font: helvetica });
+
+  if (formData.get("madre_asistio_establecimiento") === "Sí")
+    page2.drawText("X", { x: 664, y: 851, size: fontSize, font: helvetica });
+  else if (formData.get("madre_asistio_establecimiento") === "No")
+    page2.drawText("X", { x: 704, y: 851, size: fontSize, font: helvetica });
+
+  if (formData.get("madre_nivel") === "Primario")
+    page2.drawText("X", { x: 198, y: 835, size: fontSize, font: helvetica });
+  else if (formData.get("madre_nivel") === "Secundario")
+    page2.drawText("X", { x: 268, y: 835, size: fontSize, font: helvetica });
+  else if (formData.get("madre_nivel") === "Terciario")
+    page2.drawText("X", { x: 350, y: 835, size: fontSize, font: helvetica });
+  else if (formData.get("madre_nivel") === "Universitario")
+    page2.drawText("X", { x: 404, y: 835, size: fontSize, font: helvetica });
+
+  if (formData.get("madre_completo") === "Si") page2.drawText("X", { x: 672, y: 836, size: fontSize, font: helvetica });
+  else if (formData.get("madre_completo") === "No")
+    page2.drawText("X", { x: 712, y: 836, size: fontSize, font: helvetica });
+
+  page2.drawText(formData.get("madre_domicilio") || "", { x: 114, y: 818, size: fontSize, font: helvetica });
+  page2.drawText(formData.get("madre_localidad2") || "", { x: 642, y: 818, size: fontSize, font: helvetica });
+  page2.drawText(formData.get("madre_tel") || "", { x: 133, y: 800, size: fontSize, font: helvetica });
+  page2.drawText(formData.get("madre_cel") || "", { x: 389, y: 800, size: fontSize, font: helvetica });
+  page2.drawText(formData.get("madre_mail") || "", { x: 585, y: 800, size: fontSize, font: helvetica });
+
+  if (formData.get("madre_jefe") === "Si") page2.drawText("X", { x: 184, y: 786, size: fontSize, font: helvetica });
+  else if (formData.get("madre_jefe") === "No")
+    page2.drawText("X", { x: 223, y: 786, size: fontSize, font: helvetica });
+
+  page2.drawText(formData.get("madre_ocupacion") || "", { x: 443, y: 783, size: fontSize, font: helvetica });
+  page2.drawText(formData.get("madre_lugarocup") || "", { x: 110, y: 768, size: fontSize, font: helvetica });
+
+  page2.drawText(formData.get("madre_telefono") || "", { x: 517, y: 768, size: fontSize, font: helvetica });
+
+  if (formData.get("madre_actividad") === "1") page2.drawText("X", { x: 188, y: 754, size: fontSize, font: helvetica });
+  else if (formData.get("madre_actividad") === "2")
+    page2.drawText("X", { x: 265, y: 754, size: fontSize, font: helvetica });
+  else if (formData.get("madre_actividad") === "3")
+    page2.drawText("X", { x: 391, y: 754, size: fontSize, font: helvetica });
+  else if (formData.get("madre_actividad") === "4")
+    page2.drawText("X", { x: 563, y: 754, size: fontSize, font: helvetica });
+  else if (formData.get("madre_actividad") === "5")
+    page2.drawText("X", { x: 63, y: 738, size: fontSize, font: helvetica });
+  else if (formData.get("madre_actividad") === "6")
+    page2.drawText("X", { x: 139, y: 739, size: fontSize, font: helvetica });
+  else if (formData.get("madre_actividad") === "7")
+    page2.drawText("X", { x: 265, y: 738, size: fontSize, font: helvetica });
+  else if (formData.get("madre_actividad") === "8")
+    page2.drawText("X", { x: 471, y: 739, size: fontSize, font: helvetica });
+  else if (formData.get("madre_actividad") === "9")
+    page2.drawText("X", { x: 587, y: 739, size: fontSize, font: helvetica });
+
+  // ================== PÁGINA 2: PADRE  ================== //
 
   // ================== PÁGINA 3: TUTOR Y OTROS DATOS ==================
   const page3 = pdfDoc.getPages()[2];
