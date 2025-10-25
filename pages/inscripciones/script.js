@@ -123,6 +123,8 @@ document.getElementById("inscripcionForm").addEventListener("submit", async (e) 
   page1.drawText(formData.get("idioma_cual") || "", { x: 190, y: 75, size: fontSize, font: helvetica });
   page1.drawText(formData.get("otras_actividades") || "", { x: 318, y: 121, size: fontSize, font: helvetica });
 
+  // ================== CONTINUAR COORDENADAS ================== //
+
   // ================== PÁGINA 2: MADRE  ================== //
   const page2 = pdfDoc.getPages()[1];
 
