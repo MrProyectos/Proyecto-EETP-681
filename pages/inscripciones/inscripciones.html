@@ -611,16 +611,16 @@
 
                 <div class="subfila">
                   <span>Posee Régimen de internado fuera del establecimiento:</span>
-                  <label><input type="radio" name="hospital" value="Sí" /> Sí</label>
-                  <label><input type="radio" name="hospital" value="No" /> No</label>
+                  <label><input type="radio" name="internado_fuera" value="Sí" /> Sí</label>
+                  <label><input type="radio" name="internado_fuera" value="No" /> No</label>
                 </div>
               </div>
 
               <div class="columna">
                 <div class="subfila">
                   <span>Con atención hospi/domic. durante el año anterior:</span>
-                  <label><input type="radio" name="materias" value="Sí" /> Sí</label>
-                  <label><input type="radio" name="materias" value="No" /> No</label>
+                  <label><input type="radio" name="hospital" value="Sí" /> Sí</label>
+                  <label><input type="radio" name="hospital" value="No" /> No</label>
                 </div>
 
                 <div class="subfila">
@@ -808,14 +808,17 @@
                 <div class="subfila" id="actividad-container">
                   <label><input type="checkbox" name="doc_partida" /> Partida de Nacimiento</label>
                   <label><input type="checkbox" name="doc_libreta" /> Libreta Matrimonio</label>
-                  <label><input type="checkbox" name="doc_fotocopia" /> Fotocopia Libreta 7mo</label>
+                  <label><input type="checkbox" name="doc_fotodni" /> Fotocopia DNI</label>
+                  <label><input type="checkbox" name="doc_foto" /> Fotografía del alumno</label>
+                  <label><input type="checkbox" name="doc_certificado" /> Carnet de Salud Escolar</label>
+                  <label><input type="checkbox" name="doc_escolar" /> Fotocopia ORIGINAL de Escolaridad</label>
                 </div>
               </div>
               <div class="columna">
                 <div class="subfila" id="actividad-container">
-                  <label><input type="checkbox" name="doc_foto" /> Fotografía del alumno</label>
-                  <label><input type="checkbox" name="doc_escolar" /> Fotocopia del Nivel Escolar</label>
-                  <label><input type="checkbox" name="doc_certificado" /> Certificado </label>
+                  <label><input type="checkbox" name="doc_fotocopia" /> Fotocopia Libreta 7mo</label>
+
+                  <input type="text" name="doc_otro" placeholder="Otro" />
                 </div>
               </div>
             </div>
