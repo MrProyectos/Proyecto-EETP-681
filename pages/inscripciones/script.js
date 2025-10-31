@@ -258,25 +258,25 @@ document.getElementById("inscripcionForm").addEventListener("submit", async (e) 
   page2.drawText(formData.get("padre_ocupacion") || "", { x: 338, y: 332, size: fontSize, font: helvetica });
   page2.drawText(formData.get("padre_lugarocup") || "", { x: 83, y: 312, size: fontSize, font: helvetica });
 
-  page2.drawText(formData.get("padre_telefono") || "", { x: 141, y: 295, size: fontSize, font: helvetica });
+  page2.drawText(formData.get("padre_telefono") || "", { x: 395, y: 312, size: fontSize, font: helvetica });
 
-  if (formData.get("padre_actividad") === "1") page2.drawText("X", { x: 141, y: 295, size: fontSize, font: helvetica });
+  if (formData.get("padre_actividad") === "1") page2.drawText("X", { x: 141, y: 294, size: fontSize, font: helvetica });
   else if (formData.get("padre_actividad") === "2")
-    page2.drawText("X", { x: 218, y: 295, size: fontSize, font: helvetica });
+    page2.drawText("X", { x: 218, y: 294, size: fontSize, font: helvetica });
   else if (formData.get("padre_actividad") === "3")
-    page2.drawText("X", { x: 316, y: 295, size: fontSize, font: helvetica });
+    page2.drawText("X", { x: 316, y: 294, size: fontSize, font: helvetica });
   else if (formData.get("padre_actividad") === "4")
-    page2.drawText("X", { x: 447, y: 295, size: fontSize, font: helvetica });
+    page2.drawText("X", { x: 447, y: 294, size: fontSize, font: helvetica });
   else if (formData.get("padre_actividad") === "5")
-    page2.drawText("X", { x: 45, y: 276, size: fontSize, font: helvetica });
+    page2.drawText("X", { x: 45, y: 274, size: fontSize, font: helvetica });
   else if (formData.get("padre_actividad") === "6")
-    page2.drawText("X", { x: 102, y: 276, size: fontSize, font: helvetica });
+    page2.drawText("X", { x: 102, y: 274, size: fontSize, font: helvetica });
   else if (formData.get("padre_actividad") === "7")
-    page2.drawText("X", { x: 217, y: 276, size: fontSize, font: helvetica });
+    page2.drawText("X", { x: 217, y: 274, size: fontSize, font: helvetica });
   else if (formData.get("padre_actividad") === "8")
-    page2.drawText("X", { x: 380, y: 276, size: fontSize, font: helvetica });
+    page2.drawText("X", { x: 380, y: 274, size: fontSize, font: helvetica });
   else if (formData.get("padre_actividad") === "9")
-    page2.drawText("X", { x: 469, y: 276, size: fontSize, font: helvetica });
+    page2.drawText("X", { x: 469, y: 274, size: fontSize, font: helvetica });
 
   // ================== PÁGINA 2: TUTOR ==================
 
@@ -331,7 +331,7 @@ document.getElementById("inscripcionForm").addEventListener("submit", async (e) 
   page2.drawText(formData.get("tutor_ocupacion") || "", { x: 339, y: 124, size: fontSize, font: helvetica });
   page2.drawText(formData.get("tutor_lugarocup") || "", { x: 82, y: 110, size: fontSize, font: helvetica });
 
-  page2.drawText(formData.get("tutor_telefono") || "", { x: 518, y: 110, size: fontSize, font: helvetica });
+  page2.drawText(formData.get("tutor_telefono") || "", { x: 396, y: 110, size: fontSize, font: helvetica });
 
   if (formData.get("tutor_actividad") === "1") page2.drawText("X", { x: 141, y: 98, size: fontSize, font: helvetica });
   else if (formData.get("tutor_actividad") === "2")
@@ -430,14 +430,14 @@ document.getElementById("inscripcionForm").addEventListener("submit", async (e) 
 
   // Procedencia
   if (formData.get("procedencia_rendimiento"))
-    page3.drawText("-------", { x: 67, y: 470, size: fontSize, font: helvetica });
+    page3.drawText("-------", { x: 67, y: 481, size: fontSize, font: helvetica });
   if (formData.get("procedencia_domilicio"))
-    page3.drawText("-------", { x: 170, y: 470, size: fontSize, font: helvetica });
+    page3.drawText("-------", { x: 170, y: 481, size: fontSize, font: helvetica });
   if (formData.get("procedencia_nivel")) page3.drawText("-------", { x: 252, y: 470, size: fontSize, font: helvetica });
   if (formData.get("procedencia_conducta"))
-    page3.drawText("-------", { x: 327, y: 470, size: fontSize, font: helvetica });
+    page3.drawText("-------", { x: 327, y: 481, size: fontSize, font: helvetica });
   if (formData.get("procedencia_disconformidad"))
-    page3.drawText("-------", { x: 444, y: 470, size: fontSize, font: helvetica });
+    page3.drawText("-------", { x: 444, y: 481, size: fontSize, font: helvetica });
   if (formData.get("procedencia_distancia"))
     page3.drawText("-------", { x: 52, y: 468, size: fontSize, font: helvetica });
   if (formData.get("procedencia_otracausa"))
@@ -452,9 +452,6 @@ document.getElementById("inscripcionForm").addEventListener("submit", async (e) 
   // -------- DOCUMENTACIÓN A PRESENTAR --------
   if (formData.get("doc_partida") === "Sí") page3.drawText("X", { x: 243, y: 365, size: fontSize, font: helvetica });
   else if (formData.get("doc_partida") === "No")
-    page3.drawText("X", { x: 274, y: 365, size: fontSize, font: helvetica });
-  if (formData.get("doc_libreta") === "Sí") page3.drawText("X", { x: 243, y: 365, size: fontSize, font: helvetica });
-  else if (formData.get("doc_libreta") === "No")
     page3.drawText("X", { x: 274, y: 365, size: fontSize, font: helvetica });
   if (formData.get("doc_fotodni") === "Sí") page3.drawText("X", { x: 243, y: 348, size: fontSize, font: helvetica });
   else if (formData.get("doc_fotodni") === "No")

@@ -806,17 +806,28 @@
             <div class="fila">
               <div class="columna">
                 <div class="subfila" id="actividad-container">
-                  <label><input type="checkbox" name="doc_partida" /> Partida de Nacimiento</label>
-                  <label><input type="checkbox" name="doc_libreta" /> Libreta Matrimonio</label>
-                  <label><input type="checkbox" name="doc_fotodni" /> Fotocopia DNI</label>
-                  <label><input type="checkbox" name="doc_foto" /> Fotografía del alumno</label>
-                  <label><input type="checkbox" name="doc_certificado" /> Carnet de Salud Escolar</label>
-                  <label><input type="checkbox" name="doc_escolar" /> Fotocopia ORIGINAL de Escolaridad</label>
+                  <span>Partida de Nacimiento/Libreta Matrimonio</span>
+                  <label><input type="radio" name="doc_partida" value="Si" />Si</label>
+                  <label><input type="radio" name="doc_partida" value="No" />No</label>
+                  <span>Fotocopia DNI Alumno</span>
+                  <label><input type="radio" name="doc_fotodni" value="Si" />Si</label>
+                  <label><input type="radio" name="doc_fotodni" value="No" />No</label>
+                  <span>Fotografía del Alumno</span>
+                  <label><input type="radio" name="doc_foto" value="Si" />Si</label>
+                  <label><input type="radio" name="doc_foto" value="No" />No</label>
+                  <span>Fotocopia Carnet de Salud Escolar</span>
+                  <label><input type="radio" name="doc_certificado" value="Si" />Si</label>
+                  <label><input type="radio" name="doc_certificado" value="No" />No</label>
+                  <span>Certificado ORIGINAL de Escolaridad</span>
+                  <label><input type="radio" name="doc_escolar" value="Si" />Si</label>
+                  <label><input type="radio" name="doc_escolar" value="No" />No</label>
                 </div>
               </div>
               <div class="columna">
                 <div class="subfila" id="actividad-container">
-                  <label><input type="checkbox" name="doc_fotocopia" /> Fotocopia Libreta 7mo</label>
+                  <span>Fotocopia Libreta 7mo Grado</span>
+                  <label><input type="radio" name="doc_fotocopia" value="Si" />Si</label>
+                  <label><input type="radio" name="doc_fotocopia" value="No" />No</label>
 
                   <input type="text" name="doc_otro" placeholder="Otro" />
                 </div>
