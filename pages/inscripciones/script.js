@@ -453,21 +453,27 @@ document.getElementById("inscripcionForm").addEventListener("submit", async (e) 
   if (formData.get("doc_partida") === "Sí") page3.drawText("X", { x: 243, y: 365, size: fontSize, font: helvetica });
   else if (formData.get("doc_partida") === "No")
     page3.drawText("X", { x: 274, y: 365, size: fontSize, font: helvetica });
+
   if (formData.get("doc_fotodni") === "Sí") page3.drawText("X", { x: 243, y: 348, size: fontSize, font: helvetica });
   else if (formData.get("doc_fotodni") === "No")
     page3.drawText("X", { x: 274, y: 348, size: fontSize, font: helvetica });
+
   if (formData.get("doc_foto") === "Sí") page3.drawText("X", { x: 243, y: 331, size: fontSize, font: helvetica });
   else if (formData.get("doc_foto") === "No") page3.drawText("X", { x: 274, y: 331, size: fontSize, font: helvetica });
+
   if (formData.get("doc_certificado") === "Sí")
     page3.drawText("X", { x: 243, y: 314, size: fontSize, font: helvetica });
   else if (formData.get("doc_certificado") === "No")
     page3.drawText("X", { x: 274, y: 314, size: fontSize, font: helvetica });
+
   if (formData.get("doc_escolar") === "Sí") page3.drawText("X", { x: 243, y: 296, size: fontSize, font: helvetica });
   else if (formData.get("doc_escolar") === "No")
     page3.drawText("X", { x: 274, y: 296, size: fontSize, font: helvetica });
+
   if (formData.get("doc_fotocopia") === "Sí") page3.drawText("X", { x: 515, y: 364, size: fontSize, font: helvetica });
   else if (formData.get("doc_fotocopia") === "No")
     page3.drawText("X", { x: 546, y: 364, size: fontSize, font: helvetica });
+
   drawWrappedText(page3, formData.get("doc_otro"), 316, 334, 120, 10);
 
   // ======== GENERAR Y DESCARGAR PDF FINAL ========
