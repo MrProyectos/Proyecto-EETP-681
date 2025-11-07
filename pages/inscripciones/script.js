@@ -450,27 +450,27 @@ document.getElementById("inscripcionForm").addEventListener("submit", async (e) 
     page3.drawText("-------", { x: 400, y: 468, size: fontSize, font: helvetica });
 
   // -------- DOCUMENTACIÓN A PRESENTAR --------
-  if (formData.get("doc_partida") === "Sí") page3.drawText("X", { x: 243, y: 365, size: fontSize, font: helvetica });
+  if (formData.get("doc_partida") === "Si") page3.drawText("X", { x: 243, y: 365, size: fontSize, font: helvetica });
   else if (formData.get("doc_partida") === "No")
     page3.drawText("X", { x: 274, y: 365, size: fontSize, font: helvetica });
 
-  if (formData.get("doc_fotodni") === "Sí") page3.drawText("X", { x: 243, y: 348, size: fontSize, font: helvetica });
+  if (formData.get("doc_fotodni") === "Si") page3.drawText("X", { x: 243, y: 348, size: fontSize, font: helvetica });
   else if (formData.get("doc_fotodni") === "No")
     page3.drawText("X", { x: 274, y: 348, size: fontSize, font: helvetica });
 
-  if (formData.get("doc_foto") === "Sí") page3.drawText("X", { x: 243, y: 331, size: fontSize, font: helvetica });
+  if (formData.get("doc_foto") === "Si") page3.drawText("X", { x: 243, y: 331, size: fontSize, font: helvetica });
   else if (formData.get("doc_foto") === "No") page3.drawText("X", { x: 274, y: 331, size: fontSize, font: helvetica });
 
-  if (formData.get("doc_certificado") === "Sí")
+  if (formData.get("doc_certificado") === "Si")
     page3.drawText("X", { x: 243, y: 314, size: fontSize, font: helvetica });
   else if (formData.get("doc_certificado") === "No")
     page3.drawText("X", { x: 274, y: 314, size: fontSize, font: helvetica });
 
-  if (formData.get("doc_escolar") === "Sí") page3.drawText("X", { x: 243, y: 296, size: fontSize, font: helvetica });
+  if (formData.get("doc_escolar") === "Si") page3.drawText("X", { x: 243, y: 296, size: fontSize, font: helvetica });
   else if (formData.get("doc_escolar") === "No")
     page3.drawText("X", { x: 274, y: 296, size: fontSize, font: helvetica });
 
-  if (formData.get("doc_fotocopia") === "Sí") page3.drawText("X", { x: 515, y: 364, size: fontSize, font: helvetica });
+  if (formData.get("doc_fotocopia") === "Si") page3.drawText("X", { x: 515, y: 364, size: fontSize, font: helvetica });
   else if (formData.get("doc_fotocopia") === "No")
     page3.drawText("X", { x: 546, y: 364, size: fontSize, font: helvetica });
 
