@@ -1,3 +1,26 @@
+<?php include 'conexion.php'; ?>
+
+<?php
+$sql = "SELECT * 
+        FROM avisos 
+        WHERE activo = 1 
+          AND (fecha_expiracion IS NULL OR fecha_expiracion >= CURDATE())
+        ORDER BY fecha_creacion DESC
+        LIMIT 1";
+
+$result = $conn->query($sql);
+$aviso = $result->fetch_assoc();
+?>
+
+<?php if ($aviso): ?>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h2><?php echo $aviso['titulo']; ?></h2>
+        <p><?php echo nl2br($aviso['contenido']); ?></p>
+    </div>
+</div>
+<?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -159,6 +182,26 @@
         </div>
       </div>
     </section>
+
+    <?php if ($aviso): ?>
+    <div id="modalAviso" class="modal" style="display: none">
+      <div class="modal-content">
+        <span onclick="cerrarAviso()" style="float: right; cursor: pointer">&times;</span>
+        <h2><?= $aviso['titulo'] ?></h2>
+        <p><?= nl2br($aviso['contenido']) ?></p>
+      </div>
+    </div>
+
+    <script>
+      window.onload = () => {
+        document.getElementById("modalAviso").style.display = "block";
+      };
+
+      function cerrarAviso() {
+        document.getElementById("modalAviso").style.display = "none";
+      }
+    </script>
+    <?php endif; ?>
 
     <!-- FOOTER -->
     <footer>
