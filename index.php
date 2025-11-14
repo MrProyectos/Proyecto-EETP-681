@@ -183,26 +183,6 @@ $aviso = $result->fetch_assoc();
       </div>
     </section>
 
-    <?php if ($aviso): ?>
-    <div id="modalAviso" class="modal" style="display: none">
-      <div class="modal-content">
-        <span onclick="cerrarAviso()" style="float: right; cursor: pointer">&times;</span>
-        <h2><?= $aviso['titulo'] ?></h2>
-        <p><?= nl2br($aviso['contenido']) ?></p>
-      </div>
-    </div>
-
-    <script>
-      window.onload = () => {
-        document.getElementById("modalAviso").style.display = "block";
-      };
-
-      function cerrarAviso() {
-        document.getElementById("modalAviso").style.display = "none";
-      }
-    </script>
-    <?php endif; ?>
-
     <!-- FOOTER -->
     <footer>
       <section class="disfooter">
@@ -261,6 +241,35 @@ $aviso = $result->fetch_assoc();
     <button id="btnVolverArriba" title="Volver al inicio">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
+
+    <!-- Modal de Aviso -->
+    <?php if ($aviso): ?>
+    <div class="modal-overlay" id="modalAviso">
+        <div class="modal-box">
+
+            <img src="assets/img/logo-escuela.png" class="modal-logo" alt="Logo">
+
+            <div class="modal-line"></div>
+            <div class="modal-line"></div>
+
+            <h2 class="modal-title"><?= htmlspecialchars($aviso['titulo']) ?></h2>
+            <p class="modal-text"><?= nl2br(htmlspecialchars($aviso['contenido'])) ?></p>
+
+            <button class="modal-btn" onclick="document.getElementById('modalAviso').style.display='none'">
+                Cerrar
+            </button>
+
+        </div>
+    </div>
+    <?php endif; ?>
+
+    <script>
+    window.addEventListener("load", () => {
+        const modal = document.getElementById("modalAviso");
+        if(modal){ modal.style.display = "flex"; }
+    });
+    </script>
+
 
     <script src="script.js"></script>
   </body>

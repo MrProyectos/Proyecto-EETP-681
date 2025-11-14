@@ -154,3 +154,93 @@
     height: auto;
   }
 }
+
+/* Modal Avisos */
+/* ===== MODAL AVISOS ===== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-box {
+  background: #fff;
+  width: 90%;
+  max-width: 600px;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  animation: slideIn 0.3s ease;
+}
+
+.modal-logo {
+  width: 70px;
+  opacity: 0.95;
+  margin-bottom: 10px;
+}
+
+.modal-line {
+  width: 60%;
+  height: 2px;
+  background: #003366;
+  margin: 6px auto;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #002244;
+  margin-top: 15px;
+}
+
+.modal-text {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.modal-btn {
+  margin-top: 20px;
+  background: #003366;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal-btn:hover {
+  background: #001f4d;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
