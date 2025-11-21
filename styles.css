@@ -155,7 +155,6 @@
   }
 }
 
-/* Modal Avisos */
 /* ===== MODAL AVISOS ===== */
 
 .modal-overlay {
@@ -172,7 +171,7 @@
 .modal-box {
   background: #fff;
   width: 90%;
-  max-width: 600px;
+  max-width: 480px;
   padding: 25px;
   border-radius: 12px;
   text-align: center;
@@ -224,7 +223,6 @@
   background: #001f4d;
 }
 
-/* Animaciones */
 @keyframes fadeIn {
   from {
     opacity: 0;

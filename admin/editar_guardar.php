@@ -10,15 +10,16 @@ if (!isset($_SESSION["loggeado"]) || $_SESSION["loggeado"] !== true) {
 $archivo = "../avisos.json";
 $data = json_decode(file_get_contents($archivo), true);
 
-$nuevo = [
-    "id" => time(),
-    "titulo" => $_POST["titulo"],
-    "contenido" => $_POST["contenido"],
-    "fecha_expiracion" => $_POST["fecha_expiracion"] ?: null,
-    "activo" => isset($_POST["activo"]) ? 1 : 0
-];
+$id = $_POST["id"];
 
-$data["avisos"][] = $nuevo;
+foreach ($data["avisos"] as &$aviso) {
+    if ($aviso["id"] == $id) {
+        $aviso["titulo"] = $_POST["titulo"];
+        $aviso["contenido"] = $_POST["contenido"];
+        $aviso["fecha_expiracion"] = $_POST["fecha_expiracion"] ?: null;
+        $aviso["activo"] = isset($_POST["activo"]) ? 1 : 0;
+    }
+}
 
 file_put_contents($archivo, json_encode($data, JSON_PRETTY_PRINT));
 

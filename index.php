@@ -1,25 +1,19 @@
-<?php include 'conexion.php'; ?>
-
 <?php
-$sql = "SELECT * 
-        FROM avisos 
-        WHERE activo = 1 
-          AND (fecha_expiracion IS NULL OR fecha_expiracion >= CURDATE())
-        ORDER BY fecha_creacion DESC
-        LIMIT 1";
+// Leer avisos del archivo JSON
+$avisosData = json_decode(file_get_contents("avisos.json"), true);
+$avisos = $avisosData["avisos"];
 
-$result = $conn->query($sql);
-$aviso = $result->fetch_assoc();
+$aviso = null;
+$hoy = date("Y-m-d");
+
+// Buscar el primer aviso activo y no expirado
+foreach ($avisos as $a) {
+    if ($a["activo"] == 1 && ($a["fecha_expiracion"] === null || $a["fecha_expiracion"] >= $hoy)) {
+        $aviso = $a;
+        break;
+    }
+}
 ?>
-
-<?php if ($aviso): ?>
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <h2><?php echo $aviso['titulo']; ?></h2>
-        <p><?php echo nl2br($aviso['contenido']); ?></p>
-    </div>
-</div>
-<?php endif; ?>
 
 <!DOCTYPE html>
 <html lang="es">
