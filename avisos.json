@@ -1,11 +1,11 @@
 {
-  "avisos": [
-    {
-      "id": 1,
-      "titulo": "Inscripciones 2026",
-      "contenido": "Est\u00e1n abiertas las inscripciones a 1\u00b0 a\u00f1o.",
-      "fecha_expiracion": "2025-12-01",
-      "activo": 1
-    }
-  ]
+    "avisos": [
+        {
+            "id": 1,
+            "titulo": "Inscripciones 2026",
+            "contenido": "Est\u00e1n abiertas las inscripciones a 1\u00b0 a\u00f1o.",
+            "fecha_expiracion": "2025-12-01",
+            "activo": 1
+        }
+    ]
 }
