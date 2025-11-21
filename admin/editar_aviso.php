@@ -1,12 +1,10 @@
 <?php
 session_start();
-if (!isset($_SESSION["loggeado"]) || $_SESSION["loggeado"] !== true) {
+if (!isset($_SESSION["loggeado"])) {
     header("Location: login.php");
     exit();
 }
-?>
 
-<?php
 $archivo = "../avisos.json";
 $data = json_decode(file_get_contents($archivo), true);
 
@@ -14,30 +12,54 @@ $id = $_GET["id"];
 $aviso = null;
 
 foreach ($data["avisos"] as $a) {
-    if ($a["id"] == $id) { $aviso = $a; break; }
+    if ($a["id"] == $id) {
+        $aviso = $a;
+        break;
+    }
+}
+
+if (!$aviso) {
+    echo "Aviso no encontrado";
+    exit();
 }
 ?>
 <!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"><title>Editar Aviso</title></head>
-<body>
-<h1>Editar Aviso</h1>
-<form action="editar_guardar.php" method="POST">
-<input type="hidden" name="id" value="<?= $aviso["id"] ?>">
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Editar Aviso</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
-Título:<br>
-<input type="text" name="titulo" value="<?= htmlspecialchars($aviso["titulo"]) ?>" required><br><br>
+<body class="bg-light">
 
-Contenido:<br>
-<textarea name="contenido" required><?= htmlspecialchars($aviso["contenido"]) ?></textarea><br><br>
+<div class="container mt-4">
 
-Fecha de expiración:<br>
-<input type="date" name="fecha_expiracion" value="<?= $aviso["fecha_expiracion"] ?>"><br><br>
+    <h2>Editar Aviso</h2>
 
-Activo:
-<input type="checkbox" name="activo" <?= $aviso["activo"] ? "checked" : "" ?>><br><br>
+    <form action="editar_guardar.php" method="POST" class="card p-4 shadow">
 
-<button type="submit">Guardar Cambios</button>
-</form>
+        <input type="hidden" name="id" value="<?= $aviso["id"] ?>">
+
+        <label class="mt-2">Título</label>
+        <input name="titulo" class="form-control" value="<?= htmlspecialchars($aviso["titulo"]) ?>" required>
+
+        <label class="mt-3">Contenido</label>
+        <textarea name="contenido" class="form-control" rows="5" required><?= htmlspecialchars($aviso["contenido"]) ?></textarea>
+
+        <label class="mt-3">Fecha de expiración</label>
+        <input type="date" name="fecha_expiracion" value="<?= $aviso["fecha_expiracion"] ?>" class="form-control">
+
+        <div class="form-check mt-3">
+            <input type="checkbox" name="activo" class="form-check-input" <?= $aviso["activo"] ? "checked" : "" ?>>
+            <label class="form-check-label">Activo</label>
+        </div>
+
+        <button class="btn btn-warning mt-4">Guardar Cambios</button>
+
+    </form>
+
+</div>
+
 </body>
 </html>

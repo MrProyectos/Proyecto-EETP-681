@@ -1,30 +1,43 @@
 <?php
 session_start();
-if (!isset($_SESSION["loggeado"]) || $_SESSION["loggeado"] !== true) {
+if (!isset($_SESSION["loggeado"])) {
     header("Location: login.php");
     exit();
 }
 ?>
-
 <!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"><title>Nuevo Aviso</title></head>
-<body>
-<h1>Nuevo Aviso</h1>
-<form action="guardar_aviso.php" method="POST">
-Título:<br>
-<input type="text" name="titulo" required><br><br>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Nuevo Aviso</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
-Contenido:<br>
-<textarea name="contenido" required></textarea><br><br>
+<body class="bg-light">
 
-Fecha de expiración:<br>
-<input type="date" name="fecha_expiracion"><br><br>
+<div class="container mt-4">
+    <h2>Nuevo Aviso</h2>
 
-Activo:
-<input type="checkbox" name="activo" checked><br><br>
+    <form action="guardar_aviso.php" method="POST" class="card p-4 shadow">
 
-<button type="submit">Guardar</button>
-</form>
+        <label class="mt-2">Título</label>
+        <input name="titulo" class="form-control" required>
+
+        <label class="mt-3">Contenido</label>
+        <textarea name="contenido" class="form-control" rows="5" required></textarea>
+
+        <label class="mt-3">Fecha de expiración (opcional)</label>
+        <input type="date" name="fecha_expiracion" class="form-control">
+
+        <div class="form-check mt-3">
+            <input type="checkbox" name="activo" class="form-check-input" checked>
+            <label class="form-check-label">Activo</label>
+        </div>
+
+        <button class="btn btn-success mt-4">Guardar Aviso</button>
+    </form>
+
+</div>
+
 </body>
 </html>

@@ -1,12 +1,9 @@
 <?php
-// Leer avisos del archivo JSON
 $avisosData = json_decode(file_get_contents("avisos.json"), true);
 $avisos = $avisosData["avisos"];
-
 $aviso = null;
 $hoy = date("Y-m-d");
 
-// Buscar el primer aviso activo y no expirado
 foreach ($avisos as $a) {
     if ($a["activo"] == 1 && ($a["fecha_expiracion"] === null || $a["fecha_expiracion"] >= $hoy)) {
         $aviso = $a;
@@ -240,28 +237,21 @@ foreach ($avisos as $a) {
     <?php if ($aviso): ?>
     <div class="modal-overlay" id="modalAviso">
         <div class="modal-box">
-
-            <img src="assets/img/logo-escuela.png" class="modal-logo" alt="Logo">
-
+            <img src="assets/img/logo-escuela.png" class="modal-logo">
             <div class="modal-line"></div>
             <div class="modal-line"></div>
-
             <h2 class="modal-title"><?= htmlspecialchars($aviso['titulo']) ?></h2>
             <p class="modal-text"><?= nl2br(htmlspecialchars($aviso['contenido'])) ?></p>
-
-            <button class="modal-btn" onclick="document.getElementById('modalAviso').style.display='none'">
-                Cerrar
-            </button>
-
+            <button class="modal-btn" onclick="document.getElementById('modalAviso').style.display='none'">Cerrar</button>
         </div>
     </div>
     <?php endif; ?>
 
     <script>
-    window.addEventListener("load", () => {
-        const modal = document.getElementById("modalAviso");
-        if(modal){ modal.style.display = "flex"; }
-    });
+    window.onload = () => {
+        const m = document.getElementById("modalAviso");
+        if (m) m.style.display = "flex";
+    }
     </script>
 
 
