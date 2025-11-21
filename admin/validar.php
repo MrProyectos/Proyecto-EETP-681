@@ -1,9 +1,6 @@
 <?php
 session_start();
-
-// Credenciales directas (podés cambiarlas cuando quieras)
-$ADMIN_USER = "admin";
-$ADMIN_PASS = "eetp681AVISOS"; // podés cambiarlo, o pedirme versión con hash
+require_once "config.php";
 
 $u = $_POST["usuario"] ?? "";
 $p = $_POST["password"] ?? "";
